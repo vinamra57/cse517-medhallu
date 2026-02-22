@@ -1,0 +1,13 @@
+[project]
+name = "cse517-medhallu"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=1.2.1",
+    "fsspec>=2026.2.0",
+    "huggingface-hub>=1.4.1",
+    "pandas>=3.0.1",
+    "pyarrow>=23.0.1",
+]
