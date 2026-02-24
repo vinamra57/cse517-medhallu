@@ -108,10 +108,10 @@ def optimize_with_textgrad(
     Returns:
         The optimized hallucinated answer string
     """
-    if os.environ.get("OPENAI_API_KEY"):
-        tg.set_backward_engine("gpt-4o-mini", override=True)
-    elif os.environ.get("GROQ_API_KEY"):
+    if os.environ.get("GROQ_API_KEY"):
         tg.set_backward_engine("groq-llama-3.1-8b-instant", override=True)
+    elif os.environ.get("OPENAI_API_KEY"):
+        tg.set_backward_engine("gpt-4o-mini", override=True)
     else:
         raise RuntimeError("No API key found. Set OPENAI_API_KEY or GROQ_API_KEY in .env")
 

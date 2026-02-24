@@ -295,7 +295,9 @@ def test_textgrad_called_with_correct_params(mock_tg):
     from utils import optimize_with_textgrad
     optimize_with_textgrad("response", "truth", "question?", "knowledge", max_iterations=3)
 
-    mock_tg.set_backward_engine.assert_called_once_with("gpt-4o-mini", override=True)
+    mock_tg.set_backward_engine.assert_called_once()
+    engine_name = mock_tg.set_backward_engine.call_args[0][0]
+    assert engine_name in ("gpt-4o-mini", "groq-llama-3.1-8b-instant")
     mock_tg.Variable.assert_called_once()
     assert mock_tg.Variable.call_args.kwargs["requires_grad"] is True
     mock_tg.TextLoss.assert_called_once()
