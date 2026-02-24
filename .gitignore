@@ -1,5 +1,5 @@
 medqa_data_artificial.csv
 medqa_data_labeled.csv
 .env
-__pycache__/llm.cpython-312.pyc
-__pycache__/prompt.cpython-312.pyc
+__pycache__/
+logs/
