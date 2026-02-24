@@ -8,8 +8,8 @@ from utils import *
 
 #Hyperparams to tune
 
-#Different model used for now
-MODEL_NAME = "qwen/qwen3-32b" if os.environ.get("GROQ_API_KEY") else "gpt-4o-mini"
+# Paper uses Qwen/Qwen2.5-14B-Instruct; override via MODEL_NAME env var for local testing
+MODEL_NAME = os.environ.get("MODEL_NAME", "Qwen/Qwen2.5-14B-Instruct")
 NUM_ATTEMPTS = 4
 ENTAILMENT_THRESH = 0.75
 
