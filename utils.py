@@ -9,7 +9,9 @@ from llm import LLM
 from datasets import load_dataset
 
 BATCH_SIZE = 9000
-MODELS = ["openai/gpt-oss-20b", "llama-3.1-8b-instant", "moonshotai/kimi-k2-instruct"]
+GROQ_MODELS = ["openai/gpt-oss-20b", "llama-3.1-8b-instant", "moonshotai/kimi-k2-instruct"]
+OPENAI_MODELS = ["gpt-4o-mini", "gpt-4o-mini", "gpt-4o-mini"]
+MODELS = GROQ_MODELS if os.environ.get("GROQ_API_KEY") else OPENAI_MODELS
 DIFFICULTIES = {1: "Easy", 2: "Medium", 3: "Hard"}
 
 # Lazy-loaded singletons for models
@@ -106,7 +108,12 @@ def optimize_with_textgrad(
     Returns:
         The optimized hallucinated answer string
     """
-    tg.set_backward_engine("gpt-4o-mini", override=True)
+    if os.environ.get("OPENAI_API_KEY"):
+        tg.set_backward_engine("gpt-4o-mini", override=True)
+    elif os.environ.get("GROQ_API_KEY"):
+        tg.set_backward_engine("groq-llama-3.1-8b-instant", override=True)
+    else:
+        raise RuntimeError("No API key found. Set OPENAI_API_KEY or GROQ_API_KEY in .env")
 
     hallu_var = tg.Variable(
         value=hallu_response,
@@ -215,6 +222,8 @@ def get_min_similarity(hallucinations: List[str], ground_truth: str) -> str:
 
 
 def find_hallu_parts(hallu_response):
+    if hallu_response is None:
+        return "", ""
     # Find Hallucinated Answer
     start_idx = hallu_response.find("#Hallucinated Answer#: ")
     if start_idx != -1:
