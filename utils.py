@@ -9,9 +9,10 @@ from llm import LLM
 from datasets import load_dataset
 
 BATCH_SIZE = 9000
-GROQ_MODELS = ["openai/gpt-oss-20b", "llama-3.1-8b-instant", "moonshotai/kimi-k2-instruct"]
-OPENAI_MODELS = ["gpt-4o-mini", "gpt-4o-mini", "gpt-4o-mini"]
-MODELS = GROQ_MODELS if os.environ.get("GROQ_API_KEY") else OPENAI_MODELS
+# Paper uses gpt-4o-mini, gemma-2-2b-it, Qwen2.5-3B-Instruct; override via DISCRIMINATOR_MODELS env var
+_default_models = ["gpt-4o-mini", "google/gemma-2-2b-it", "Qwen/Qwen2.5-3B-Instruct"]
+_env_models = os.environ.get("DISCRIMINATOR_MODELS")
+MODELS = _env_models.split(",") if _env_models else _default_models
 DIFFICULTIES = {1: "Easy", 2: "Medium", 3: "Hard"}
 
 # Lazy-loaded singletons for models
@@ -19,12 +20,12 @@ _nli_tokenizer = None
 _nli_model = None
 _embed_model = None
 
-NLI_MODEL_NAME = "microsoft/deberta-large-mnli"
-EMBED_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
+NLI_MODEL_NAME = "roberta-large-mnli"
+EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
 
 
 def _load_nli_model():
-    """Lazy singleton loader for the DeBERTa-large-MNLI model."""
+    """Lazy singleton loader for the RoBERTa-large-MNLI model."""
     global _nli_tokenizer, _nli_model
     if _nli_tokenizer is None:
         _nli_tokenizer = AutoTokenizer.from_pretrained(NLI_MODEL_NAME)
@@ -43,8 +44,8 @@ def _load_embedding_model():
 
 def _compute_nli_entailment_score(premise: str, hypothesis: str) -> float:
     """
-    Compute P(entailment | premise, hypothesis) using DeBERTa-large-MNLI.
-    DeBERTa label mapping: {0: CONTRADICTION, 1: NEUTRAL, 2: ENTAILMENT}
+    Compute P(entailment | premise, hypothesis) using RoBERTa-large-MNLI.
+    RoBERTa label mapping: {0: CONTRADICTION, 1: NEUTRAL, 2: ENTAILMENT}
     """
     tokenizer, model = _load_nli_model()
 
@@ -108,12 +109,7 @@ def optimize_with_textgrad(
     Returns:
         The optimized hallucinated answer string
     """
-    if os.environ.get("GROQ_API_KEY"):
-        tg.set_backward_engine("groq-llama-3.1-8b-instant", override=True)
-    elif os.environ.get("OPENAI_API_KEY"):
-        tg.set_backward_engine("gpt-4o-mini", override=True)
-    else:
-        raise RuntimeError("No API key found. Set OPENAI_API_KEY or GROQ_API_KEY in .env")
+    tg.set_backward_engine("gpt-4o-mini", override=True)
 
     hallu_var = tg.Variable(
         value=hallu_response,
@@ -172,7 +168,7 @@ def find_difficulty(results):
 def get_entailment(hallu_response: str, ground_truth: str) -> float:
     """
     Compute bidirectional entailment score between hallucinated response
-    and ground truth using DeBERTa-large-MNLI.
+    and ground truth using RoBERTa-large-MNLI.
 
     Formula: E(H, GT) = min(NLI(H -> GT), NLI(GT -> H))
 
