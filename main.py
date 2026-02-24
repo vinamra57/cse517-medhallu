@@ -11,7 +11,7 @@ from utils import *
 #Different model used for now
 MODEL_NAME = "qwen/qwen3-32b"
 NUM_ATTEMPTS = 4
-ENTAILMENT_THRESH = 0.5
+ENTAILMENT_THRESH = 0.75
 
 def generate_hallucinated_answer(question: str, knowledge: str, ground_truth: str) -> Tuple[str, int]:
     hallucinations = []
@@ -31,17 +31,17 @@ def generate_hallucinated_answer(question: str, knowledge: str, ground_truth: st
             difficulty = find_difficulty(results)
             return hallu_response, difficulty
         
-        optimized_hallu_response = optimize_with_textgrad()
+        optimized_hallu_response = optimize_with_textgrad(hallu_response, ground_truth, question, knowledge)
         
         results = evaluate_response_quality(optimized_hallu_response, ground_truth, question)
-        entailment_score = get_entailment(hallu_response, ground_truth)
+        entailment_score = get_entailment(optimized_hallu_response, ground_truth)
         if any(results) and entailment_score < ENTAILMENT_THRESH:
             difficulty = find_difficulty(results)
             return optimized_hallu_response, difficulty
         
         hallucinations.append(optimized_hallu_response)
 
-    min_hallu = get_min_similarity(hallucinations)
+    min_hallu = get_min_similarity(hallucinations, ground_truth)
     return min_hallu, 1
 
 def main():
