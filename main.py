@@ -9,7 +9,7 @@ from utils import *
 #Hyperparams to tune
 
 #Different model used for now
-MODEL_NAME = "qwen/qwen3-32b"
+MODEL_NAME = "qwen/qwen3-32b" if os.environ.get("GROQ_API_KEY") else "gpt-4o-mini"
 NUM_ATTEMPTS = 4
 ENTAILMENT_THRESH = 0.75
 
@@ -23,6 +23,10 @@ def generate_hallucinated_answer(question: str, knowledge: str, ground_truth: st
         
         #For now, we only get the response and print it. Code for quality control is required.
         hallu_response = llm_model.get_response(prompt)
+
+        if hallu_response is None:
+            print(f"Attempt {attempt + 1}: LLM returned None, skipping")
+            continue
 
         results = evaluate_response_quality(hallu_response, ground_truth, question)
         #Must calculate entailment
