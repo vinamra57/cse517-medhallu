@@ -6,8 +6,10 @@ Skip markers auto-detect missing dependencies/keys.
 import pytest
 import sys
 import os
+from dotenv import load_dotenv
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+load_dotenv()
 
 # Detect if models can be loaded
 try:
@@ -31,7 +33,7 @@ HAS_OPENAI_KEY = os.environ.get("OPENAI_API_KEY") is not None
 
 @pytest.mark.skipif(not HAS_TRANSFORMERS, reason="transformers not installed")
 class TestRealEntailment:
-    """Tests using the actual DeBERTa-large-MNLI model."""
+    """Tests using the actual RoBERTa-large-MNLI model."""
 
     @pytest.fixture(autouse=True)
     def reset_singleton(self):
