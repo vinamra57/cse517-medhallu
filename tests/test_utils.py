@@ -1,5 +1,4 @@
 """Unit tests for utils.py with mocked models (no API keys or model downloads needed)."""
-import pytest
 from unittest.mock import patch, MagicMock
 import torch
 import sys
@@ -8,10 +7,17 @@ import os
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from utils import (  # noqa: E402
+    evaluate_response_quality,
+    find_difficulty,
+    find_hallu_parts,
+    get_entailment,
+    get_min_similarity,
+    optimize_with_textgrad,
+)
+
 
 # ── Tests for find_hallu_parts ──
-
-from utils import find_hallu_parts
 
 
 def test_find_hallu_parts_normal():
@@ -46,8 +52,6 @@ def test_find_hallu_parts_empty_string():
 
 # ── Tests for find_difficulty ──
 
-from utils import find_difficulty
-
 
 def test_difficulty_easy():
     assert find_difficulty([True, False, False]) == "Easy"
@@ -62,8 +66,6 @@ def test_difficulty_hard():
 
 
 # ── Tests for evaluate_response_quality ──
-
-from utils import evaluate_response_quality
 
 
 @patch("utils.LLM")
@@ -121,7 +123,6 @@ def test_entailment_identical_texts(mock_load):
     mock_model.return_value.logits = torch.tensor([[-5.0, -5.0, 5.0]])
     mock_load.return_value = (mock_tokenizer, mock_model)
 
-    from utils import get_entailment
     score = get_entailment("The cat sat on the mat.", "The cat sat on the mat.")
     assert score > 0.9
 
@@ -136,7 +137,6 @@ def test_entailment_contradictory_texts(mock_load):
     mock_model.return_value.logits = torch.tensor([[5.0, 0.0, -5.0]])
     mock_load.return_value = (mock_tokenizer, mock_model)
 
-    from utils import get_entailment
     score = get_entailment("It is raining.", "It is sunny and dry.")
     assert score < 0.1
 
@@ -165,7 +165,6 @@ def test_entailment_bidirectional_takes_min(mock_load):
     mock_model.side_effect = side_effect
     mock_load.return_value = (mock_tokenizer, mock_model)
 
-    from utils import get_entailment
     score = get_entailment("Premise text", "Hypothesis text")
     # Should take the minimum of both directions
     assert score < 0.5
@@ -180,7 +179,6 @@ def test_entailment_returns_float_in_range(mock_load):
     mock_model.return_value.logits = torch.tensor([[1.0, 1.0, 1.0]])
     mock_load.return_value = (mock_tokenizer, mock_model)
 
-    from utils import get_entailment
     score = get_entailment("Some text.", "Other text.")
     assert isinstance(score, float)
     assert 0.0 <= score <= 1.0
@@ -191,14 +189,12 @@ def test_entailment_returns_float_in_range(mock_load):
 
 @patch("utils._load_embedding_model")
 def test_min_similarity_single_item(mock_load):
-    from utils import get_min_similarity
     result = get_min_similarity(["Only one candidate"], "ground truth")
     assert result == "Only one candidate"
     mock_load.assert_not_called()
 
 
 def test_min_similarity_empty_list():
-    from utils import get_min_similarity
     result = get_min_similarity([], "ground truth")
     assert result == ""
 
@@ -213,14 +209,12 @@ def test_min_similarity_selects_most_similar(mock_load):
     ]
     mock_load.return_value = mock_model
 
-    from utils import get_min_similarity
     result = get_min_similarity(["similar candidate", "different candidate"], "ground truth")
     assert result == "similar candidate"
 
 
 @patch("utils._load_embedding_model")
 def test_min_similarity_filters_none(mock_load):
-    from utils import get_min_similarity
     # Only one valid candidate after filtering None
     result = get_min_similarity([None, "valid candidate", None], "ground truth")
     assert result == "valid candidate"
@@ -236,7 +230,6 @@ def test_min_similarity_identical_candidate(mock_load):
     ]
     mock_load.return_value = mock_model
 
-    from utils import get_min_similarity
     result = get_min_similarity(["identical to gt", "very different"], "ground truth")
     assert result == "identical to gt"
 
@@ -255,7 +248,6 @@ def test_textgrad_returns_string(mock_tg):
     mock_tg.TextLoss.return_value = MagicMock(return_value=MagicMock())
     mock_tg.TGD.return_value = MagicMock()
 
-    from utils import optimize_with_textgrad
     result = optimize_with_textgrad(
         "initial response", "ground truth", "question?", "knowledge", max_iterations=1
     )
@@ -274,7 +266,6 @@ def test_textgrad_preserves_format(mock_tg):
     mock_tg.TextLoss.return_value = MagicMock(return_value=MagicMock())
     mock_tg.TGD.return_value = MagicMock()
 
-    from utils import optimize_with_textgrad
     result = optimize_with_textgrad(
         "initial", "truth", "q?", "knowledge", max_iterations=1
     )
@@ -292,7 +283,6 @@ def test_textgrad_called_with_correct_params(mock_tg):
     mock_optimizer = MagicMock()
     mock_tg.TGD.return_value = mock_optimizer
 
-    from utils import optimize_with_textgrad
     optimize_with_textgrad("response", "truth", "question?", "knowledge", max_iterations=3)
 
     mock_tg.set_backward_engine.assert_called_once()
@@ -315,7 +305,6 @@ def test_textgrad_respects_max_iterations(mock_tg):
     mock_optimizer = MagicMock()
     mock_tg.TGD.return_value = mock_optimizer
 
-    from utils import optimize_with_textgrad
     optimize_with_textgrad("response", "truth", "q?", "knowledge", max_iterations=3)
 
     assert mock_optimizer.step.call_count == 3

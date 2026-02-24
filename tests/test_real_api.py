@@ -3,27 +3,17 @@
 Run with: uv run pytest tests/test_real_api.py -v
 Skip markers auto-detect missing dependencies/keys.
 """
-import pytest
-import sys
+import importlib.util
 import os
+import sys
+
+import pytest
 from dotenv import load_dotenv
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 load_dotenv()
-
-# Detect if models can be loaded
-try:
-    import torch
-    from transformers import AutoTokenizer, AutoModelForSequenceClassification
-    HAS_TRANSFORMERS = True
-except ImportError:
-    HAS_TRANSFORMERS = False
-
-try:
-    from sentence_transformers import SentenceTransformer
-    HAS_SENTENCE_TRANSFORMERS = True
-except ImportError:
-    HAS_SENTENCE_TRANSFORMERS = False
+HAS_TRANSFORMERS = importlib.util.find_spec("transformers") is not None
+HAS_SENTENCE_TRANSFORMERS = importlib.util.find_spec("sentence_transformers") is not None
 
 HAS_OPENAI_KEY = os.environ.get("OPENAI_API_KEY") is not None
 

@@ -1,10 +1,18 @@
+import os
+from typing import Tuple
+
 import pandas as pd
 
 from llm import LLM
-from prompt import *
-from typing import Tuple
-import os
-from utils import *
+from prompt import hallucination_prompt
+from utils import (
+    download_file_if_not_exists,
+    evaluate_response_quality,
+    find_difficulty,
+    get_entailment,
+    get_min_similarity,
+    optimize_with_textgrad,
+)
 
 #Hyperparams to tune
 
@@ -15,7 +23,7 @@ ENTAILMENT_THRESH = 0.75
 
 def generate_hallucinated_answer(question: str, knowledge: str, ground_truth: str) -> Tuple[str, int]:
     hallucinations = []
-    llm_model = LLM(model = MODEL_NAME, system_prompt= hallucination_prompt)
+    llm_model = LLM(model=MODEL_NAME, system_prompt=hallucination_prompt)
 
     for attempt in range(NUM_ATTEMPTS):
         print(f"Attempt {attempt + 1}")
@@ -53,7 +61,7 @@ def main():
     download_file_if_not_exists()
 
     df_artificial = pd.read_csv("medqa_data_artificial.csv")
-    df_labeled = pd.read_csv("medqa_data_labeled.csv")
+    pd.read_csv("medqa_data_labeled.csv")  # ensure labeled data is downloaded
     print("Loaded data from local machine")
     
     #Only one response for now.

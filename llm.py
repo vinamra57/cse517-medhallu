@@ -1,8 +1,9 @@
 import os
+from typing import Optional
+
 import openai
 import torch
 from dotenv import load_dotenv
-from prompt import *
 
 load_dotenv()
 
@@ -88,26 +89,26 @@ class LLM():
             self.pipeline = _get_local_pipeline(model)
             self.backend = "local"
 
-    def get_response(self, user_prompt: str) -> str:
+    def get_response(self, user_prompt: str) -> Optional[str]:
         if self.backend == "local":
             return self._get_local_response(user_prompt)
         elif self.backend == "hf_api":
             return self._get_hf_api_response(user_prompt)
         return self._get_api_response(user_prompt)
 
-    def _get_api_response(self, user_prompt: str) -> str:
-        messages = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]
+    def _get_api_response(self, user_prompt: str) -> Optional[str]:
+        messages: list[dict[str, str]] = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]
         try:
             response = self.client.chat.completions.create(
                 model=self.model,
-                messages=messages
+                messages=messages  # type: ignore[arg-type]
             )
             return response.choices[0].message.content
         except Exception as e:
             print(f"Error ({self.backend}): {e}")
             return None
 
-    def _get_hf_api_response(self, user_prompt: str) -> str:
+    def _get_hf_api_response(self, user_prompt: str) -> Optional[str]:
         messages = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]
         try:
             response = self.hf_client.chat_completion(
@@ -119,7 +120,7 @@ class LLM():
             print(f"Error (hf_api): {e}")
             return None
 
-    def _get_local_response(self, user_prompt: str) -> str:
+    def _get_local_response(self, user_prompt: str) -> Optional[str]:
         messages = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]
         try:
             outputs = self.pipeline(

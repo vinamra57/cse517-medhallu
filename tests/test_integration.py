@@ -1,5 +1,4 @@
 """Integration tests for the hallucination generation pipeline with mocked external APIs."""
-import pytest
 from unittest.mock import patch, MagicMock
 import sys
 import os

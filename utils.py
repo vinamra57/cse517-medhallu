@@ -4,7 +4,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from sentence_transformers import SentenceTransformer, util as st_util
 import textgrad as tg
-from prompt import *
+from prompt import detection_prompt
 from llm import LLM
 from datasets import load_dataset
 
@@ -62,7 +62,7 @@ def _compute_nli_entailment_score(premise: str, hypothesis: str) -> float:
 
     probs = torch.softmax(logits, dim=-1)[0]
 
-    # DeBERTa-large-MNLI: index 2 = ENTAILMENT
+    # RoBERTa-large-MNLI: index 2 = ENTAILMENT
     entailment_idx = 2
     id2label = model.config.id2label
     for idx, label in id2label.items():
@@ -212,7 +212,7 @@ def get_min_similarity(hallucinations: List[str], ground_truth: str) -> str:
     hallu_embeddings = model.encode(valid, convert_to_tensor=True)
 
     cosine_scores = st_util.cos_sim(hallu_embeddings, gt_embedding)  # shape: [N, 1]
-    best_idx = cosine_scores.argmax().item()
+    best_idx = int(cosine_scores.argmax().item())
 
     return valid[best_idx]
 
