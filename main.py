@@ -1,8 +1,8 @@
 import os
 from typing import Tuple
-
+import math
 import pandas as pd
-
+import time
 from llm import LLM
 from prompt import hallucination_prompt
 from utils import (
@@ -12,7 +12,10 @@ from utils import (
     get_entailment,
     get_min_similarity,
     optimize_with_textgrad,
+    find_hallu_parts, 
+    parse_knowledge
 )
+from tqdm import tqdm
 
 #Hyperparams to tune
 
@@ -20,6 +23,9 @@ from utils import (
 MODEL_NAME = os.environ.get("MODEL_NAME", "Qwen/Qwen2.5-14B-Instruct")
 NUM_ATTEMPTS = 4
 ENTAILMENT_THRESH = 0.75
+GENERATOR_TEMPERATURE = 0.8
+DISCRIMINATOR_TEMPERATURE = 0.3
+TOP_P_THRESHOLD = 0.95
 
 def generate_hallucinated_answer(question: str, knowledge: str, ground_truth: str) -> Tuple[str, int]:
     hallucinations = []
@@ -30,50 +36,98 @@ def generate_hallucinated_answer(question: str, knowledge: str, ground_truth: st
         prompt = f"#Question#: {question}\n\n#Knowledge#: {knowledge}\n\n#Ground truth answer#: {ground_truth}\n\n#Hallucinated Answer#:"
         
         #For now, we only get the response and print it. Code for quality control is required.
-        hallu_response = llm_model.get_response(prompt)
+        print(f"Getting initial response attempt {attempt + 1}")
+        hallu_response = llm_model.get_response(prompt, temp = GENERATOR_TEMPERATURE, top_p=TOP_P_THRESHOLD)
 
-        if hallu_response is None:
+        if hallu_response is None or hallu_response.strip() == "":
             print(f"Attempt {attempt + 1}: LLM returned None, skipping")
             continue
-
-        results = evaluate_response_quality(hallu_response, ground_truth, question)
+        
+        hallu, justification, type = find_hallu_parts(hallu_response)
+        print(f"Evaluating initial response attempt {attempt + 1}")
+        results = evaluate_response_quality(hallu, justification, ground_truth, question, temp = DISCRIMINATOR_TEMPERATURE)
         #Must calculate entailment
         entailment_score = get_entailment(hallu_response, ground_truth)
         if any(results) and entailment_score < ENTAILMENT_THRESH:
             difficulty = find_difficulty(results)
-            return hallu_response, difficulty
+            return hallu, justification, type, difficulty
         
-        optimized_hallu_response = optimize_with_textgrad(hallu_response, ground_truth, question, knowledge)
+        print(f"Optimizing attempt {attempt + 1}")
+        try:
+            optimized_hallu_response = optimize_with_textgrad(hallu_response, ground_truth, question, knowledge)
+        except Exception as e:
+            print(f"TextGrad failed: {e}, skipping optimization")
+            optimized_hallu_response = None
         
-        results = evaluate_response_quality(optimized_hallu_response, ground_truth, question)
-        entailment_score = get_entailment(optimized_hallu_response, ground_truth)
+        if optimized_hallu_response is None or optimized_hallu_response.strip() == "":
+            print(f"Attempt {attempt + 1}: LLM returned None, skipping")
+            continue
+        
+        hallu, justification, type = find_hallu_parts(optimized_hallu_response)
+        print(f"Evaluating optimized response attempt {attempt + 1}")
+        results = evaluate_response_quality(hallu, justification, ground_truth, question, temp = DISCRIMINATOR_TEMPERATURE)
+        entailment_score = get_entailment(hallu, ground_truth)
         if any(results) and entailment_score < ENTAILMENT_THRESH:
             difficulty = find_difficulty(results)
-            return optimized_hallu_response, difficulty
+            return hallu, justification, type, difficulty
         
-        hallucinations.append(optimized_hallu_response)
+        hallucinations.append(hallu_response)
 
     min_hallu = get_min_similarity(hallucinations, ground_truth)
-    return min_hallu, 1
+    hallu, justification, type = find_hallu_parts(min_hallu)
+    return hallu, justification, type, "Easy"
 
 def main():
-    #Load the data locally, or if it isn't there, from hugging face
     download_file_if_not_exists()
 
     df_artificial = pd.read_csv("medqa_data_artificial.csv")
-    pd.read_csv("medqa_data_labeled.csv")  # ensure labeled data is downloaded
+    df_labeled = pd.read_csv("medqa_data_labeled.csv")
+    original_df_artificial = pd.read_csv("medhallu_dataset_artificial.csv")
+    original_df_labeled = pd.read_csv("medhallu_dataset_labeled.csv")
     print("Loaded data from local machine")
-    
-    #Only one response for now.
-    question = df_artificial['question'][4]
-    knowledge = df_artificial['context'][4]
-    ground_truth = df_artificial['long_answer'][4]
 
-    result, difficulty = generate_hallucinated_answer(question, knowledge, ground_truth)
-    print(f"Question: {question}")
-    print(f"True Answer: {ground_truth}")
-    print(f"Hallucinated Answer: {result}")
-    print(f"Difficulty: {difficulty}")
+    if os.path.exists("checkpoint.csv"):
+        existing_df = pd.read_csv("checkpoint.csv")
+        results = existing_df.to_dict('records')
+        completed_questions = set(existing_df["Question"].tolist())
+        print(f"Resuming: {len(results)} samples already completed")
+    else:
+        results = []
+        completed_questions = set()
+    accurate = 0
+
+    for i in tqdm(range(500)):
+        question = df_artificial['question'][i]
+        # Skip already completed
+        if question in completed_questions:
+            continue
+
+        knowledge = df_artificial['context'][i]
+        ground_truth = df_artificial['long_answer'][i]
+
+        hallu, justification, type, difficulty = generate_hallucinated_answer(question, knowledge, ground_truth)
+        print(f"Difficulty: {difficulty}")
+
+        results.append({
+            'Question': question,
+            'Knowledge': parse_knowledge(knowledge),
+            'Ground Truth': ground_truth,
+            'Difficulty Level': difficulty,
+            'Hallucinated Answer': hallu,
+            'Category of Hallucination': type
+        })
+
+        if (difficulty == original_df_artificial["Difficulty Level"][i]):
+            accurate += 1
+        
+        print(f"Current accuracy = {accurate}/{(i + 1)} = {accurate/(i + 1)}")
+        pd.DataFrame(results).to_csv("checkpoint.csv", index=False)
+        #To avoid rate limits
+        time.sleep(10) 
+
+    df_out = pd.DataFrame(results)
+    df_out.to_csv("medqa_hallucinated.csv", index=False)
+    print(f"Saved {len(df_out)} rows to medqa_hallucinated.csv")
 
 if __name__ == "__main__":
     main()

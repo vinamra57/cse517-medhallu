@@ -10,7 +10,7 @@ Given a question, the right answer, and related knowledge, you should:
 5. Avoid overly bold or outlandish claims; subtle inaccuracies are harder to detect.
 6. Internally review the hallucinated answer and justification for plausibility before finalizing the response.
 
-Make sure to output using the format `#Hallucination Type#: <type>` and `#Hallucinated Answer#: <hallucinated answer>` and `#Justification of Hallucinated answer#: <justification>`.
+Make sure to output using the format `#Hallucinated Answer#: <hallucinated answer>` and `#Justification of Hallucinated answer#: <justification>`.
 
 Here is an example of a question, the right answer, and related knowledge and its hallucinated answer and justification:
 
@@ -60,7 +60,7 @@ Example:
 You should try your best to make the answer become hallucinated using any type which seems appropriate for the question. #Hallucinated Answer# can only have about 5 more words than #Ground truth answer#
 Justification should not be more than 2 times longer than the hallucinated answer and should have citations or references that bolster the factually incorrect answer.
 Nowhere in the hallucinated answer or the justification you should have any mention that the answer is hallucinated or incorrect.
-Dont be verbose, just return the #Hallucination Type#, #Hallucinated Answer# and #Justification of Hallucinated answer# , dont return anything else. The #Hallucination Type# must be exactly one of: "Misinterpretation of Question", "Incomplete Information", "Mechanism and Pathway Misattribution", "Methodological and Evidence Fabrication".
+Dont be verbose, just return the #Hallucinated Answer# and #Justification of Hallucinated answer# , dont return anything else.
 """
 
 detection_prompt = """
