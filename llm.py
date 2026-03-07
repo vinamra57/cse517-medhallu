@@ -1,6 +1,6 @@
 import os
 from typing import Optional
-
+import time
 import openai
 import torch
 from dotenv import load_dotenv
@@ -89,19 +89,32 @@ class LLM():
             self.pipeline = _get_local_pipeline(model)
             self.backend = "local"
 
-    def get_response(self, user_prompt: str) -> Optional[str]:
-        if self.backend == "local":
-            return self._get_local_response(user_prompt)
-        elif self.backend == "hf_api":
-            return self._get_hf_api_response(user_prompt)
-        return self._get_api_response(user_prompt)
+    def get_response(self, user_prompt: str, temp: Optional[float] = 0.5, top_p: Optional[float] = 0.95) -> Optional[str]:
+        for attempt in range(3):
+            try:
+                if self.backend == "local":
+                    return self._get_local_response(user_prompt)
+                elif self.backend == "hf_api":
+                    return self._get_hf_api_response(user_prompt)
+                return self._get_api_response(user_prompt, temp, top_p)
+            except Exception as e:
+                if "429" in str(e):
+                    wait = 60 * (attempt + 1)
+                    print(f"Rate limit hit, waiting {wait}s...")
+                    time.sleep(wait)
+                else:
+                    print(f"Error: {e}")
+                    return None
+        return None
 
-    def _get_api_response(self, user_prompt: str) -> Optional[str]:
+    def _get_api_response(self, user_prompt: str, temp: Optional[float] = 0.5, top_p: Optional[float] = 0.95) -> Optional[str]:
         messages: list[dict[str, str]] = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]
         try:
             response = self.client.chat.completions.create(
                 model=self.model,
-                messages=messages  # type: ignore[arg-type]
+                messages=messages,
+                temperature=temp,
+                top_p=top_p
             )
             return response.choices[0].message.content
         except Exception as e:

@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 import os
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
@@ -7,12 +7,13 @@ import textgrad as tg
 from prompt import detection_prompt
 from llm import LLM
 from datasets import load_dataset
+import ast
 
 BATCH_SIZE = 9000
 # Paper uses gpt-4o-mini, gemma-2-2b-it, Qwen2.5-3B-Instruct; override via DISCRIMINATOR_MODELS env var
 _default_models = ["gpt-4o-mini", "google/gemma-2-2b-it", "Qwen/Qwen2.5-3B-Instruct"]
 _env_models = os.environ.get("DISCRIMINATOR_MODELS")
-MODELS = _env_models.split(",") if _env_models else _default_models
+MODELS = [m.strip() for m in _env_models.split(",")] if _env_models else _default_models
 DIFFICULTIES = {1: "Easy", 2: "Medium", 3: "Hard"}
 
 # Lazy-loaded singletons for models
@@ -22,6 +23,14 @@ _embed_model = None
 
 NLI_MODEL_NAME = "roberta-large-mnli"
 EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
+
+
+
+def parse_knowledge(knowledge):
+    arr_start = "'contexts': array("
+    start_array = knowledge.find(arr_start) + len(arr_start)
+    end_array = knowledge.find("']") + 2
+    return knowledge[start_array : end_array]
 
 
 def _load_nli_model():
@@ -74,18 +83,23 @@ def _compute_nli_entailment_score(premise: str, hypothesis: str) -> float:
 
 
 #Can update the inputs and outputs of these methods
-def evaluate_response_quality(hallu_response: str, ground_truth: str, question: str) -> List[bool]:
+def evaluate_response_quality(hallu: str, justification: str, ground_truth: str, question: str, temp: Optional[float] = 0.5) -> List[bool]:
     responses = []
-    answer, justification = find_hallu_parts(hallu_response)
     option_1 = ground_truth
-    option_2 = answer
+    option_2 = hallu
     for model in MODELS:
         llm = LLM(model=model, system_prompt=detection_prompt)
         user_prompt = f"Question: {question} Option 1: {option_1} Option 2: {option_2} + {justification}"
-        response = llm.get_response(user_prompt)
-        responses.append(False if response == "Option 1" else True)
+        response = extract_answer(llm.get_response(user_prompt, temp = temp))
+        responses.append(False if "1" in response else True)
 
     return responses
+
+def extract_answer(response):
+    if "</think>" in response:
+        loc = response.find("</think>")
+        return response[(loc + len("</think>")) :].strip()
+    return response
 
 
 def optimize_with_textgrad(
@@ -109,7 +123,7 @@ def optimize_with_textgrad(
     Returns:
         The optimized hallucinated answer string
     """
-    tg.set_backward_engine("gpt-4o-mini", override=True)
+    tg.set_backward_engine("groq-llama-3.3-70b-versatile", override=True)
 
     hallu_var = tg.Variable(
         value=hallu_response,
@@ -118,8 +132,12 @@ def optimize_with_textgrad(
             "A hallucinated medical answer that should sound plausible "
             "and natural but be factually incorrect. It must fool medical "
             "expert LLMs into thinking it is correct. The output must use "
-            "the format: #Hallucinated Answer#: <answer> and "
-            "#Justification of Hallucinated answer#: <justification>"
+            "the format: #Hallucination Type#: <type> and "
+            "#Hallucinated Answer#: <answer> and "
+            "#Justification of Hallucinated answer#: <justification>. "
+            "The #Hallucination Type# must be exactly one of: "
+            "'Misinterpretation of Question', 'Incomplete Information', "
+            "'Mechanism and Pathway Misattribution', 'Methodological and Evidence Fabrication'."
         )
     )
 
@@ -219,7 +237,17 @@ def get_min_similarity(hallucinations: List[str], ground_truth: str) -> str:
 
 def find_hallu_parts(hallu_response):
     if hallu_response is None:
-        return "", ""
+        return "", "", ""
+
+    # Find Hallucination Type
+    start_idx = hallu_response.find("#Hallucination Type#: ")
+    if start_idx != -1:
+        start_idx += len("#Hallucination Type#: ")
+        end_idx = hallu_response.find("#Hallucinated Answer#", start_idx)
+        hallu_type = hallu_response[start_idx:end_idx].strip() if end_idx != -1 else hallu_response[start_idx:].strip()
+    else:
+        hallu_type = "Unknown"
+
     # Find Hallucinated Answer
     start_idx = hallu_response.find("#Hallucinated Answer#: ")
     if start_idx != -1:
@@ -237,13 +265,18 @@ def find_hallu_parts(hallu_response):
     else:
         justification = ""
 
-    return hallucinated_answer, justification
+    return hallucinated_answer, justification, hallu_type
 
 
 def download_file_if_not_exists():
     if not os.path.exists("medqa_data_artificial.csv") or not os.path.exists("medqa_data_labeled.csv"):
         dataset_artificial = load_dataset("qiaojin/PubMedQA", "pqa_artificial", split=f"train[:{BATCH_SIZE}]").to_pandas()
         dataset_labeled = load_dataset("qiaojin/PubMedQA", "pqa_labeled", split="train").to_pandas()
-
         dataset_artificial.to_csv("medqa_data_artificial.csv", index=False)
         dataset_labeled.to_csv("medqa_data_labeled.csv", index=False)
+
+    if not os.path.exists("medhallu_dataset_artificial.csv") or not os.path.exists("medhallu_dataset_labeled.csv"):
+        original_df_artificial = load_dataset("UTAustin-AIHealth/MedHallu", "pqa_artificial", split="train").to_pandas()
+        original_df_labeled = load_dataset("UTAustin-AIHealth/MedHallu", "pqa_labeled", split="train").to_pandas()
+        original_df_artificial.to_csv("medhallu_dataset_artificial.csv", index=False)
+        original_df_labeled.to_csv("medhallu_dataset_labeled.csv", index=False)

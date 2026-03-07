@@ -9,6 +9,7 @@ dependencies = [
     "datasets>=1.2.1",
     "dotenv>=0.9.9",
     "fsspec>=2023.1.0",
+    "groq>=1.0.0",
     "huggingface-hub>=1.4.1",
     "openai>=2.21.0",
     "pandas>=3.0.1",
