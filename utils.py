@@ -11,7 +11,7 @@ import ast
 
 BATCH_SIZE = 9000
 # Paper uses gpt-4o-mini, gemma-2-2b-it, Qwen2.5-3B-Instruct; override via DISCRIMINATOR_MODELS env var
-_default_models = ["gpt-4o-mini", "google/gemma-2-2b-it", "Qwen/Qwen2.5-3B-Instruct"]
+_default_models = ["Qwen/Qwen2.5-3B-Instruct", "gpt-4o-mini", "google/gemma-2-2b-it"]
 _env_models = os.environ.get("DISCRIMINATOR_MODELS")
 MODELS = [m.strip() for m in _env_models.split(",")] if _env_models else _default_models
 DIFFICULTIES = {1: "Easy", 2: "Medium", 3: "Hard"}
@@ -123,7 +123,7 @@ def optimize_with_textgrad(
     Returns:
         The optimized hallucinated answer string
     """
-    tg.set_backward_engine("groq-llama-3.3-70b-versatile", override=True)
+    tg.set_backward_engine("gpt-4o-mini", override=True)
 
     hallu_var = tg.Variable(
         value=hallu_response,

@@ -18,6 +18,12 @@ GROQ_MODELS = {
     "meta-llama/llama-4-scout-17b-16e-instruct",
 }
 
+LOCAL_MODELS = {
+    "Qwen/Qwen2.5-7B-Instruct": "http://localhost:8085/v1",
+    "google/gemma-2-2b-it": "http://localhost:8086/v1",
+    "Qwen/Qwen2.5-3B-Instruct": "http://localhost:8087/v1"
+}
+
 # Cache for local HuggingFace pipelines (avoid reloading per call)
 _local_pipelines = {}
 
@@ -71,6 +77,11 @@ class LLM():
                 raise RuntimeError(f"OPENAI_API_KEY required for model {model}")
             self.client = openai.OpenAI(api_key=api_key)
             self.backend = "openai"
+        elif model in LOCAL_MODELS:
+            self.client = openai.OpenAI(
+                base_url=LOCAL_MODELS[model],
+            )
+            self.backend = "openai"       
         elif model in GROQ_MODELS:
             groq_key = os.environ.get("GROQ_API_KEY")
             if not groq_key:
@@ -125,8 +136,7 @@ class LLM():
         messages = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]
         try:
             response = self.hf_client.chat_completion(
-                messages=messages,
-                max_tokens=512,
+                messages=messages
             )
             return response.choices[0].message.content
         except Exception as e:
@@ -134,12 +144,21 @@ class LLM():
             return None
 
     def _get_local_response(self, user_prompt: str) -> Optional[str]:
-        messages = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]
+        if self.system_prompt:
+            messages = [
+                {"role": "system", "content": self.system_prompt},
+                {"role": "user", "content": user_prompt}
+            ]
+        else:
+            messages = [
+                {"role": "user", "content": user_prompt}
+            ]
+        
         try:
             outputs = self.pipeline(
                 messages,
-                max_new_tokens=512,
                 temperature=0.8,
+                max_new_tokens = 512,
                 top_p=0.95,
                 do_sample=True,
             )

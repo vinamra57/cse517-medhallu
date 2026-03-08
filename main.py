@@ -20,7 +20,7 @@ from tqdm import tqdm
 #Hyperparams to tune
 
 # Paper uses Qwen/Qwen2.5-14B-Instruct; override via MODEL_NAME env var for local testing
-MODEL_NAME = os.environ.get("MODEL_NAME", "Qwen/Qwen2.5-14B-Instruct")
+MODEL_NAME = os.environ.get("MODEL_NAME", "Qwen/Qwen2.5-7B-Instruct")
 NUM_ATTEMPTS = 4
 ENTAILMENT_THRESH = 0.75
 GENERATOR_TEMPERATURE = 0.8
@@ -117,13 +117,13 @@ def main():
             'Category of Hallucination': type
         })
 
-        if (difficulty == original_df_artificial["Difficulty Level"][i]):
+        if (difficulty.lower() == original_df_artificial["Difficulty Level"][i].lower()):
             accurate += 1
         
         print(f"Current accuracy = {accurate}/{(i + 1)} = {accurate/(i + 1)}")
         pd.DataFrame(results).to_csv("checkpoint.csv", index=False)
         #To avoid rate limits
-        time.sleep(10) 
+        time.sleep(2) 
 
     df_out = pd.DataFrame(results)
     df_out.to_csv("medqa_hallucinated.csv", index=False)

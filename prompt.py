@@ -66,3 +66,27 @@ Dont be verbose, just return the #Hallucination Type#, #Hallucinated Answer# and
 detection_prompt = """
 You are an AI assistant with extensive knowledge in the field of medicine. Your task is to analyze medical questions and determine the correct answer from two given options. When presented with a question, carefully read it along with the two answer choices. Use your medical expertise to evaluate which option is correct, then clearly state your chosen answer. Dont return any other text other than the chosen answer in the form of `Option 1` or `Option 2`. No Explaination, dont be verbose
 """
+
+eval_prompt = """
+You are an AI assistant with extensive knowledge in the field of medicine. I want you act as an answer judge. Given a question and an
+answer, your objective is to determine if the provided answer contains non-factual or hallucinated information. You SHOULD give your judgement based
+on the following hallucination types and the world knowledge.
+
+You are trying to determine if there is a factual contradiction between the answer and the world knowledge. Some information in the answer might be fabricated. Answer '0' if the answer is factual and '1' if the answer is hallucinated.
+You can categorize the answer as hallucinated if it falls in either of the category:
+
+Type: Misinterpretation of #Question#: These are hallucinated answers that misunderstands the question, leading to an off-topic or
+irrelevant response.
+
+Type: Incomplete Information: These are hallucinated answers that Point out what is not true without providing correct information.
+
+Type: Mechanism and Pathway Misattribution - These are hallucinated answer that falsely attribution of biological mechanisms,
+molecular pathways, or disease processes that contradicts established medical knowledge
+
+Type: Methodological and Evidence Fabrication - Inventing false research methods, statistical data, or specific clinical outcomes
+
+Do not return anything else, just the answer.
+
+Return just an integer value, '0' if the answer is factual and '1' if the answer is hallucinated. No letter or word, just the integer value.
+
+"""
