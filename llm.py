@@ -21,7 +21,10 @@ GROQ_MODELS = {
 LOCAL_MODELS = {
     "Qwen/Qwen2.5-7B-Instruct": "http://localhost:8085/v1",
     "google/gemma-2-2b-it": "http://localhost:8086/v1",
-    "Qwen/Qwen2.5-3B-Instruct": "http://localhost:8087/v1"
+    "Qwen/Qwen2.5-3B-Instruct": "http://localhost:8087/v1",
+    "TsinghuaC3I/Llama-3.1-8B-UltraMedical": "http://localhost:8089/v1",
+    "BioMistral/BioMistral-7B": "http://localhost:8088/v1",
+    "meta-llama/Llama-3.1-8B-Instruct": "http://localhost:8090/v1",
 }
 
 # Cache for local HuggingFace pipelines (avoid reloading per call)

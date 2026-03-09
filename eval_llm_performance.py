@@ -8,11 +8,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 models_to_test = [
-    "google/gemma-2-2b-it",
     "TsinghuaC3I/Llama-3.1-8B-UltraMedical",
     "BioMistral/BioMistral-7B",
-    "meta-llama/Llama-3.1-8B-Instruct",
     "Qwen/Qwen2.5-7B-Instruct",
+    "google/gemma-2-2b-it",
+    "meta-llama/Llama-3.1-8B-Instruct",
     "gpt-4o-mini",
 ]
 
