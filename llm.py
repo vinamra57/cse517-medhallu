@@ -74,17 +74,21 @@ class LLM():
         self.system_prompt = system_prompt
         self.backend = None  # "openai", "groq", "hf_api", "local"
 
+        #Allows many APIs and modes to be used. 
+        #OpenAI API
         if model.startswith(OPENAI_PREFIXES):
             api_key = os.environ.get("OPENAI_API_KEY")
             if not api_key:
                 raise RuntimeError(f"OPENAI_API_KEY required for model {model}")
             self.client = openai.OpenAI(api_key=api_key)
             self.backend = "openai"
+        #Local models ran using llama.cpp
         elif model in LOCAL_MODELS:
             self.client = openai.OpenAI(
                 base_url=LOCAL_MODELS[model],
             )
             self.backend = "openai"       
+        #Groq API (Which calls OpenAI but this is free and good for testing)
         elif model in GROQ_MODELS:
             groq_key = os.environ.get("GROQ_API_KEY")
             if not groq_key:
@@ -94,6 +98,7 @@ class LLM():
                 api_key=groq_key
             )
             self.backend = "groq"
+        #Hugging face models
         elif os.environ.get("HF_TOKEN"):
             # Use HuggingFace Inference API for non-OpenAI/non-Groq models
             self.hf_client = _get_hf_client(model)
@@ -104,22 +109,15 @@ class LLM():
             self.backend = "local"
 
     def get_response(self, user_prompt: str, temp: Optional[float] = 0.5, top_p: Optional[float] = 0.95) -> Optional[str]:
-        for attempt in range(3):
-            try:
-                if self.backend == "local":
-                    return self._get_local_response(user_prompt)
-                elif self.backend == "hf_api":
-                    return self._get_hf_api_response(user_prompt)
-                return self._get_api_response(user_prompt, temp, top_p)
-            except Exception as e:
-                if "429" in str(e):
-                    wait = 60 * (attempt + 1)
-                    print(f"Rate limit hit, waiting {wait}s...")
-                    time.sleep(wait)
-                else:
-                    print(f"Error: {e}")
-                    return None
-        return None
+        try:
+            if self.backend == "local":
+                return self._get_local_response(user_prompt)
+            elif self.backend == "hf_api":
+                return self._get_hf_api_response(user_prompt)
+            return self._get_api_response(user_prompt, temp, top_p)
+        except Exception as e:
+            print(f"Error: {e}")
+            return None
 
     def _get_api_response(self, user_prompt: str, temp: Optional[float] = 0.5, top_p: Optional[float] = 0.95) -> Optional[str]:
         messages: list[dict[str, str]] = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user_prompt}]

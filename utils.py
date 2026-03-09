@@ -21,6 +21,7 @@ _nli_tokenizer = None
 _nli_model = None
 _embed_model = None
 
+#Model names for NLI and Embeddings
 NLI_MODEL_NAME = "roberta-large-mnli"
 EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
 
@@ -56,6 +57,7 @@ def _compute_nli_entailment_score(premise: str, hypothesis: str) -> float:
     Compute P(entailment | premise, hypothesis) using RoBERTa-large-MNLI.
     RoBERTa label mapping: {0: CONTRADICTION, 1: NEUTRAL, 2: ENTAILMENT}
     """
+    #Load the model
     tokenizer, model = _load_nli_model()
 
     inputs = tokenizer(
@@ -65,10 +67,12 @@ def _compute_nli_entailment_score(premise: str, hypothesis: str) -> float:
         max_length=512
     )
 
+    #Get the logits from the model
     with torch.no_grad():
         outputs = model(**inputs)
         logits = outputs.logits
 
+    #Use softmax to get P(Entailment), P(Contradiction), P(Neutral)
     probs = torch.softmax(logits, dim=-1)[0]
 
     # RoBERTa-large-MNLI: index 2 = ENTAILMENT
@@ -84,18 +88,52 @@ def _compute_nli_entailment_score(premise: str, hypothesis: str) -> float:
 
 #Can update the inputs and outputs of these methods
 def evaluate_response_quality(hallu: str, justification: str, ground_truth: str, question: str, temp: Optional[float] = 0.5) -> List[bool]:
+    """
+    Evaluate whether a hallucinated answer can fool a set of discriminator models.
+
+    Each model is asked to choose between the ground-truth answer and the
+    hallucinated answer (with its justification). If the model selects the
+    hallucinated option, it is considered fooled.
+
+    Args:
+        hallu (str): Generated hallucinated answer.
+        justification (str): Explanation supporting the hallucinated answer.
+        ground_truth (str): Correct answer to the question.
+        question (str): Original question.
+        temp (float, optional): Sampling temperature for discriminator models.
+
+    Returns:
+        List[bool]: For each model in MODELS, True if the hallucination fooled
+        the model, False otherwise.
+    """
     responses = []
     option_1 = ground_truth
     option_2 = hallu
     for model in MODELS:
         llm = LLM(model=model, system_prompt=detection_prompt)
         user_prompt = f"Question: {question} Option 1: {option_1} Option 2: {option_2} + {justification}"
+
+        #Get the response from the discriminator model and extract the response.
         response = extract_answer(llm.get_response(user_prompt, temp = temp))
         responses.append(False if "1" in response else True)
 
     return responses
 
 def extract_answer(response):
+    """
+    Extract the final answer from a model response.
+
+    Removes reasoning traces produced by models that include thinking tokens
+    (e.g., content before </think>) and returns only the final answer text.
+
+    Args:
+        response (str): Raw model response.
+
+    Returns:
+        str: Cleaned response containing only the answer.
+    """
+
+    #Ignore all of the thinking tokens for any reasoning models
     if "</think>" in response:
         loc = response.find("</think>")
         return response[(loc + len("</think>")) :].strip()
@@ -123,8 +161,11 @@ def optimize_with_textgrad(
     Returns:
         The optimized hallucinated answer string
     """
+
+    #We use gpt-4o-mini as our engine.
     tg.set_backward_engine("gpt-4o-mini", override=True)
 
+    #This represents the quantity we are optimizing - which is the response
     hallu_var = tg.Variable(
         value=hallu_response,
         requires_grad=True,
@@ -141,6 +182,7 @@ def optimize_with_textgrad(
         )
     )
 
+    #A loss function upon which the optimizer can improve the variable
     loss_fn = tg.TextLoss(
         f"You are evaluating a hallucinated medical answer for quality. "
         f"The answer is for this question: '{question}'. "
@@ -168,6 +210,7 @@ def optimize_with_textgrad(
         ]
     )
 
+    #Optimize for around 5 epochs.
     for _ in range(max_iterations):
         loss = loss_fn(hallu_var)
         loss.backward()
@@ -178,6 +221,18 @@ def optimize_with_textgrad(
 
 
 def find_difficulty(results):
+    """
+    Determine hallucination difficulty based on how many discriminator models were fooled.
+
+    The difficulty level is mapped from the number of models that selected the
+    hallucinated answer instead of the ground truth.
+
+    Args:
+        results (List[bool]): Boolean list where True indicates a model was fooled.
+
+    Returns:
+        str: Difficulty label corresponding to the number of fooled models.
+    """
     num_llm_fooled = sum(results)
     #Difficulty score is the number of LLMs that were fooled here
     return DIFFICULTIES[num_llm_fooled]
@@ -226,9 +281,11 @@ def get_min_similarity(hallucinations: List[str], ground_truth: str) -> str:
 
     model = _load_embedding_model()
 
+    #Embed the truth and hallucinations in the vector space.
     gt_embedding = model.encode(ground_truth, convert_to_tensor=True)
     hallu_embeddings = model.encode(valid, convert_to_tensor=True)
 
+    #Find the closest score.
     cosine_scores = st_util.cos_sim(hallu_embeddings, gt_embedding)  # shape: [N, 1]
     best_idx = int(cosine_scores.argmax().item())
 
@@ -239,7 +296,7 @@ def find_hallu_parts(hallu_response):
     if hallu_response is None:
         return "", "", ""
 
-    # Find Hallucination Type
+    # Find Hallucination Type in the response
     start_idx = hallu_response.find("#Hallucination Type#: ")
     if start_idx != -1:
         start_idx += len("#Hallucination Type#: ")
@@ -248,7 +305,7 @@ def find_hallu_parts(hallu_response):
     else:
         hallu_type = "Unknown"
 
-    # Find Hallucinated Answer
+    # Find Hallucinated Answer in the response
     start_idx = hallu_response.find("#Hallucinated Answer#: ")
     if start_idx != -1:
         start_idx += len("#Hallucinated Answer#: ")
@@ -257,7 +314,7 @@ def find_hallu_parts(hallu_response):
     else:
         hallucinated_answer = ""
 
-    # Find Justification
+    # Find Justification in the response
     start_idx = hallu_response.find("#Justification of Hallucinated answer#: ")
     if start_idx != -1:
         start_idx += len("#Justification of Hallucinated answer#: ")
