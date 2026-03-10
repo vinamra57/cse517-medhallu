@@ -8,10 +8,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 models_to_test = [
-    "TsinghuaC3I/Llama-3.1-8B-UltraMedical",
+    "google/gemma-2-2b-it",
     "BioMistral/BioMistral-7B",
     "Qwen/Qwen2.5-7B-Instruct",
-    "google/gemma-2-2b-it",
+    "TsinghuaC3I/Llama-3.1-8B-UltraMedical",
     "meta-llama/Llama-3.1-8B-Instruct",
     "gpt-4o-mini",
 ]
@@ -136,7 +136,7 @@ def get_llm_results(llm, df, system_prompt, use_context = False, use_not_sure = 
 
 
 def main():
-    df = pd.read_csv("medqa_hallucinated.csv")
+    df = pd.read_csv("medqa_hallucinated_no_opt.csv")
     all_results = []
 
     for model in models_to_test:
