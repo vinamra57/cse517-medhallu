@@ -5,7 +5,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from main import generate_hallucinated_answer
+from dataset_generation.main import generate_hallucinated_answer
 
 
 SAMPLE_QUESTION = "What is the primary cause of Type 1 Diabetes?"
