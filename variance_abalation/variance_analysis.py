@@ -112,13 +112,13 @@ def generate_hallucinated_answer(question: str, knowledge: str, ground_truth: st
     return hallu, justification, type, "Easy"
 
 def main():
-    df = pd.read_csv("medqa_hallucinated.csv")
-    original_df = pd.read_csv("medhallu_dataset_artificial.csv")
+    df = pd.read_csv("dataset_generation/medqa_hallucinated.csv")
+    original_df = pd.read_csv("dataset_generation/medhallu_dataset_artificial.csv")
     for i in tqdm(range(20)):
         results = []
         accurate = 0
 
-        filename = Path(__file__).parent / f"variance_run_{i + 1}.csv"
+        filename = Path(__file__).parent / f"runs/variance_run_{i + 1}.csv"
 
         if filename.exists():
             continue
@@ -145,17 +145,17 @@ def main():
             
             print(f"Current accuracy = {accurate}/{(j + 1)} = {accurate/(j + 1)}")
         
-        pd.DataFrame(results).to_csv(f"variance_run_{i + 1}.csv", index=False)
+        pd.DataFrame(results).to_csv(f"runs/variance_run_{i + 1}.csv", index=False)
         print("Saved")
 
 def eval():
-    original_df = pd.read_csv("medhallu_dataset_artificial.csv")
+    original_df = pd.read_csv("dataset_generation/medhallu_dataset_artificial.csv")
     
     all_runs = []
     accuracies = []
 
     for i in range(20):
-        filename = Path(__file__).parent / f"variance_run_{i + 1}.csv"
+        filename = Path(__file__).parent / f"runs/variance_run_{i + 1}.csv"
         df = pd.read_csv(filename)
         df["run"] = i + 1
         all_runs.append(df)
@@ -175,7 +175,7 @@ def eval():
     accuracy_df.loc[len(accuracy_df)] = ["summary_max", np.max(accuracies)]
     accuracy_df.loc[len(accuracy_df)] = ["summary_cv", np.std(accuracies) / np.mean(accuracies)]
     print(accuracy_df.to_string())
-    accuracy_df.to_csv("variance_accuracy.csv", index=False)
+    accuracy_df.to_csv("variance_abalation/variance_accuracy.csv", index=False)
 
     # ── 2. Difficulty distribution per run ────────────────────────────────────
     print("\n=== Difficulty Distribution Per Run ===")
@@ -183,8 +183,8 @@ def eval():
     diff_std = diff_dist.std().rename("std_across_runs")
     print(diff_dist.to_string())
     print(diff_std.to_string())
-    diff_dist.to_csv("variance_difficulty_distribution.csv")
-    diff_std.to_csv("variance_difficulty_std.csv")
+    diff_dist.to_csv("variance_abalation/variance_difficulty_distribution.csv")
+    diff_std.to_csv("variance_abalation/variance_difficulty_std.csv")
 
     # ── 3. Category distribution per run ─────────────────────────────────────
     print("\n=== Category Distribution Per Run ===")
@@ -192,8 +192,8 @@ def eval():
     cat_std = cat_dist.std().rename("std_across_runs")
     print(cat_dist.to_string())
     print(cat_std.to_string())
-    cat_dist.to_csv("variance_category_distribution.csv")
-    cat_std.to_csv("variance_category_std.csv")
+    cat_dist.to_csv("variance_abalation/variance_category_distribution.csv")
+    cat_std.to_csv("variance_abalation/variance_category_std.csv")
 
     # ── 4. Per-question difficulty stability ──────────────────────────────────
     print("\n=== Per-Question Difficulty Stability ===")
@@ -202,7 +202,7 @@ def eval():
     ).reset_index()
     question_stability.columns = ["Question", "stability_score"]
     print(question_stability.describe().to_string())
-    question_stability.to_csv("variance_question_stability.csv", index=False)
+    question_stability.to_csv("variance_abalation/variance_question_stability.csv", index=False)
 
     # ── 5. Plots ──────────────────────────────────────────────────────────────
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
@@ -232,7 +232,7 @@ def eval():
     axes[1, 1].set_ylabel("Number of Questions")
 
     plt.tight_layout()
-    plt.savefig("variance_analysis.png", dpi=150)
+    plt.savefig("variance_abalation/variance_analysis.png", dpi=150)
     plt.show()
 
     print("\n=== Saved Files ===")

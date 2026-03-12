@@ -326,13 +326,13 @@ def find_hallu_parts(hallu_response):
 
 
 def download_file_if_not_exists():
-    if not os.path.exists("medqa_data_artificial.csv") or not os.path.exists("medqa_data_labeled.csv"):
+    if not os.path.exists("dataset_generation/medqa_data_artificial.csv") or not os.path.exists("dataset_generation/medqa_data_labeled.csv"):
         dataset_artificial = load_dataset("qiaojin/PubMedQA", "pqa_artificial", split=f"train[:{BATCH_SIZE}]").to_pandas()
         dataset_labeled = load_dataset("qiaojin/PubMedQA", "pqa_labeled", split="train").to_pandas()
         dataset_artificial.to_csv("medqa_data_artificial.csv", index=False)
         dataset_labeled.to_csv("medqa_data_labeled.csv", index=False)
 
-    if not os.path.exists("medhallu_dataset_artificial.csv") or not os.path.exists("medhallu_dataset_labeled.csv"):
+    if not os.path.exists("dataset_generation/medhallu_dataset_artificial.csv") or not os.path.exists("dataset_generation/medhallu_dataset_labeled.csv"):
         original_df_artificial = load_dataset("UTAustin-AIHealth/MedHallu", "pqa_artificial", split="train").to_pandas()
         original_df_labeled = load_dataset("UTAustin-AIHealth/MedHallu", "pqa_labeled", split="train").to_pandas()
         original_df_artificial.to_csv("medhallu_dataset_artificial.csv", index=False)

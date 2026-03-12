@@ -1,0 +1,576 @@
+question,difficulty,avg_llms_fooled,cluster_size,cosine_similarity,euclidean_distance,rouge_l
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.6765453815460205,0.80430668592453,0.22222222222222218
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.31986087560653687,1.1663097143173218,0.07843137254901962
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.5994030833244324,0.8950943946838379,0.11111111111111109
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.8027690649032593,0.6280620694160461,0.14814814814814814
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.7975436449050903,0.6363275647163391,0.25000000000000006
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.8407544493675232,0.5643501877784729,0.20338983050847456
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.7985317707061768,0.6347728371620178,0.24137931034482765
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,0.0,1,0.7129372358322144,0.7577108144760132,0.19230769230769232
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.3039763271808624,1.1798505783081055,0.07843137254901962
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.2687881588935852,1.2093071937561035,0.1176470588235294
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.5923936367034912,0.9028912782669067,0.11111111111111109
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.26582270860671997,1.2117568254470825,0.11538461538461539
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.6302701234817505,0.8599185347557068,0.15384615384615385
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.7993585467338562,0.6334689855575562,0.14814814814814814
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,1.0,1,0.3155840039253235,1.169970989227295,0.11538461538461539
+Does transcranial magnetic stimulation reveal cortical hyperexcitability in episodic cluster headache?,Easy,0.0,1,1.0,0.0,1.0
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Hard,3.0,1,0.253714382648468,1.2217082977294922,0.18181818181818182
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Hard,2.25,4,0.2979763448238373,1.1730711460113525,0.18323765786452353
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Hard,3.0,1,0.2568049430847168,1.2191760540008545,0.1875
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Easy,1.0,1,0.675784170627594,0.8052525520324707,0.2898550724637681
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Easy,1.0,1,0.6703613996505737,0.8119588494300842,0.31884057971014496
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Medium,2.0,2,0.2662864029407501,1.2100307941436768,0.1846590909090909
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Medium,2.0,1,0.5897545218467712,0.9058095216751099,0.27692307692307694
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Hard,3.0,1,0.6129800081253052,0.8797954320907593,0.27397260273972607
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Hard,3.0,1,0.4019310772418976,1.0936808586120605,0.18181818181818182
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Easy,1.0,1,0.3055398762226105,1.1785246133804321,0.21538461538461542
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Hard,3.0,1,0.5824046730995178,0.9138876795768738,0.3333333333333333
+Does early primary repair of tetralogy of Fallot lead to increased postoperative resource utilization?,Easy,0.0,1,1.0,0.0,1.0
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Medium,2.0,1,0.7746891379356384,0.6712838411331177,0.24489795918367346
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.6981370449066162,0.7769981026649475,0.24489795918367346
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.6603043675422668,0.8242520093917847,0.17777777777777776
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.7688232660293579,0.6799659729003906,0.22727272727272727
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Medium,2.0,1,0.7427404522895813,0.7172998785972595,0.20833333333333331
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Hard,3.0,1,0.6858339905738831,0.7926740646362305,0.17391304347826086
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.680286705493927,0.7996416687965393,0.1276595744680851
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.7416173815727234,0.7188639640808105,0.2553191489361702
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Hard,3.0,1,0.6714789867401123,0.810581386089325,0.1818181818181818
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.650541365146637,0.8360127806663513,0.17391304347826086
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.5337280631065369,0.9656831622123718,0.09302325581395347
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.6257549524307251,0.8651533126831055,0.21739130434782608
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.5694289207458496,0.927977442741394,0.09302325581395347
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.7098717093467712,0.7617457509040833,0.22727272727272727
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,1.0,1,0.6726958155632019,0.8090786933898926,0.26666666666666666
+Does mR imaging relaxometry allow noninvasive characterization of in vivo differentiation of muscle precursor cells?,Easy,0.0,1,1.0,0.0,1.0
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Hard,2.6,5,0.8852406740188599,0.4709290862083435,0.3367042672925026
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Medium,2.0,2,0.8750275373458862,0.49355465173721313,0.38888888888888895
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Hard,3.0,1,0.8438916802406311,0.5587636232376099,0.3783783783783784
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Hard,3.0,1,0.8026982545852661,0.6281748414039612,0.34285714285714286
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Hard,3.0,1,0.9029408693313599,0.4405885636806488,0.4444444444444444
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Hard,2.5,2,0.8203119039535522,0.5946527719497681,0.38859180035650626
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Hard,3.0,1,0.9503183960914612,0.3152194321155548,0.5853658536585366
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Medium,2.0,1,0.8479964733123779,0.5513685345649719,0.3333333333333333
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Hard,3.0,1,0.8371603488922119,0.5706833004951477,0.38888888888888895
+Does blood PGC-1α Concentration predict Myocardial Salvage and Ventricular Remodeling After ST-segment Elevation Acute Myocardial Infarction?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,1.0,1,0.6760270595550537,0.8049509525299072,0.1754385964912281
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,1.0,1,0.790424108505249,0.6474195718765259,0.20338983050847456
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,1.0,1,0.6531782150268555,0.8328527212142944,0.13333333333333333
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,1.0,1,0.7202640771865845,0.7479786276817322,0.13559322033898305
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Hard,3.0,2,0.7446459531784058,0.7100495100021362,0.16807909604519775
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,0.5,2,0.6889328956604004,0.7876560091972351,0.17392619479733817
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Hard,3.0,1,0.7563256025314331,0.6981039047241211,0.16129032258064516
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,1.0,1,0.579576849937439,0.9169768691062927,0.07272727272727272
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,1.0,1,0.6686456799507141,0.8140693306922913,0.1724137931034483
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,1.0,1,0.8119250535964966,0.6133106350898743,0.14035087719298245
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Medium,2.0,1,0.6677142381668091,0.8152126669883728,0.1724137931034483
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Hard,3.0,1,0.7259276509284973,0.7403680682182312,0.13559322033898305
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Hard,3.0,1,0.7080432772636414,0.7641424536705017,0.16666666666666669
+Does glial cell line-derived neurotrophic factor promote β-catenin phosphorylation and nuclear translocation in glioma cells?,Easy,0.0,1,1.000000238418579,0.0,1.0
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Easy,1.0,2,0.5107660293579102,0.9833899140357971,0.1819121447028424
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Medium,2.0,1,0.7612201571464539,0.691057026386261,0.12500000000000003
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Hard,3.0,1,0.8207066059112549,0.598821222782135,0.27999999999999997
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Easy,0.0,2,0.7483086585998535,0.706440806388855,0.2832151300236406
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Easy,0.0,1,0.6973336935043335,0.7780312299728394,0.08888888888888888
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Medium,2.0,1,0.5475828051567078,0.9512279033660889,0.047619047619047616
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Easy,1.0,4,0.42543840408325195,1.068772315979004,0.1721014492753623
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Medium,2.0,1,0.7239248752593994,0.743068277835846,0.5555555555555556
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Easy,1.0,1,0.6778020858764648,0.8027427792549133,0.163265306122449
+Does treatment with egg antigens of Schistosoma mansoni ameliorate experimental colitis in mice through a colonic T-cell-dependent mechanism?,Hard,3.0,2,1.0,6.220817567736958e-07,1.0
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Hard,3.0,1,0.517148494720459,0.9827018976211548,0.15384615384615388
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,1,0.1862161010503769,1.2757617235183716,0.05263157894736842
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,2,0.17582687735557556,1.2749454975128174,0.051956815114709856
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,1,0.2052707076072693,1.260737419128418,0.1
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Medium,2.0,1,0.19052398204803467,1.2723804712295532,0.1111111111111111
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Medium,2.0,1,0.6816388964653015,0.7979487776756287,0.5652173913043479
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,1,0.16858448088169098,1.2895081043243408,0.15
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,1,0.17263413965702057,1.2863637208938599,0.0
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,1,0.18257200717926025,1.27861487865448,0.0975609756097561
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,1,0.2201422154903412,1.2488857507705688,0.10256410256410257
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Medium,2.0,1,0.19019804894924164,1.2726365327835083,0.05263157894736842
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Medium,2.0,1,0.16042248904705048,1.2958221435546875,0.1
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Medium,2.0,1,0.16938689351081848,1.2888857126235962,0.10256410256410257
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,1.0,1,0.21418443322181702,1.2536472082138062,0.0
+Does aminoguanidine inhibit ventricular fibrosis and remodeling process in isoproterenol-induced hypertrophied rat hearts by suppressing ROS and MMPs?,Easy,0.0,1,1.0,0.0,1.0
+Is intermediate filament protein nestin expressed in developing meninges?,Easy,0.4,5,0.6672838926315308,0.8145393133163452,0.106674253200569
+Is intermediate filament protein nestin expressed in developing meninges?,Easy,0.6666666666666666,3,0.6804264783859253,0.7987468242645264,0.1052753094858358
+Is intermediate filament protein nestin expressed in developing meninges?,Easy,0.0,2,0.6302916407585144,0.8597226738929749,0.09387387387387387
+Is intermediate filament protein nestin expressed in developing meninges?,Easy,0.0,1,0.5543588399887085,0.9440775513648987,0.08219178082191782
+Is intermediate filament protein nestin expressed in developing meninges?,Medium,2.0,1,0.7622079849243164,0.6896260976791382,0.1518987341772152
+Is intermediate filament protein nestin expressed in developing meninges?,Medium,2.0,1,0.6690930128097534,0.8135196566581726,0.10810810810810811
+Is intermediate filament protein nestin expressed in developing meninges?,Medium,2.0,1,0.6340433359146118,0.8555193543434143,0.08108108108108107
+Is intermediate filament protein nestin expressed in developing meninges?,Easy,0.0,1,0.6721007823944092,0.809813916683197,0.10810810810810811
+Is intermediate filament protein nestin expressed in developing meninges?,Easy,0.0,1,1.0,0.0,1.0
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,1,0.43768393993377686,1.0604867935180664,0.1739130434782609
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,1,0.49291449785232544,1.0070606470108032,0.25
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,1,0.5122475028038025,0.9876765608787537,0.2608695652173913
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Easy,1.0,1,0.5997209548950195,0.8947392106056213,0.3478260869565218
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,1,0.5094149112701416,0.9905404448509216,0.0909090909090909
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,1,0.5344973802566528,0.9648860692977905,0.1818181818181818
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,4,0.5233111381530762,0.9585883617401123,0.22942193675889325
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,1,0.6546276211738586,0.8311105370521545,0.36000000000000004
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,1.6666666666666667,3,0.5329535007476807,0.9594095349311829,0.1818181818181818
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Medium,2.0,1,0.496893048286438,1.00310218334198,0.17777777777777776
+Do antiphospholipid antibodies correlate with stroke severity and outcome in patients with antiphospholipid syndrome?,Easy,0.0,1,1.0,0.0,1.0
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Medium,2.0,1,0.5806179046630859,0.915840744972229,0.14814814814814814
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Hard,3.0,1,0.5545023679733276,0.9439254999160767,0.12903225806451615
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Easy,1.0,1,0.5190342664718628,0.9807811379432678,0.12903225806451615
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Hard,3.0,1,0.5876702070236206,0.9081077575683594,0.16666666666666669
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Hard,2.5,2,0.5962471961975098,0.8859214782714844,0.2430875576036866
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Easy,1.0,1,0.5450393557548523,0.953898012638092,0.12903225806451615
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Easy,1.0,1,0.5711835026741028,0.9260848164558411,0.21428571428571427
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Easy,1.0,1,0.5647921562194824,0.9329608678817749,0.14285714285714288
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Easy,1.0,2,0.520117998123169,0.9790878891944885,0.14285714285714288
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Hard,3.0,1,0.522476851940155,0.9772647023200989,0.07692307692307691
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Easy,1.0,1,0.5914159417152405,0.9039735794067383,0.3225806451612903
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Hard,3.0,1,0.5883342027664185,0.9073762893676758,0.3225806451612903
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Hard,3.0,1,0.5970373153686523,0.8977335095405579,0.20689655172413796
+Do genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Hard,3.0,1,0.778022289276123,0.6662998199462891,0.2222222222222222
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Hard,3.0,2,0.7572767734527588,0.6924459338188171,0.18874007936507936
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Medium,2.0,1,0.6079456806182861,0.885499119758606,0.09523809523809523
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Easy,0.0,1,0.7504922747612,0.7064103484153748,0.21875
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Easy,0.0,2,0.8599532842636108,0.5291681885719299,0.6582278481012658
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Medium,2.0,1,0.7338394522666931,0.7296034693717957,0.25
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Medium,2.0,1,0.6906346082687378,0.7865945100784302,0.21538461538461542
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Easy,1.0,1,0.7376682162284851,0.7243366241455078,0.1739130434782609
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Easy,1.0,1,0.8492342829704285,0.5491189360618591,0.4533333333333333
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Hard,3.0,1,0.7837674021720886,0.657620906829834,0.14925373134328357
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Hard,3.0,1,0.7923153638839722,0.6444916129112244,0.24615384615384614
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Easy,1.0,1,0.7335516214370728,0.7299978733062744,0.15384615384615385
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Medium,2.0,1,0.6650098562240601,0.8185232877731323,0.06451612903225806
+Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?,Easy,0.0,1,1.0,0.0,1.0
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Hard,2.5,2,0.599549412727356,0.8945774435997009,0.07843137254901962
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Medium,1.5,2,0.5945249795913696,0.899667501449585,0.04124149659863946
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Medium,2.0,1,0.6872133612632751,0.7909318804740906,0.10714285714285712
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Easy,1.0,1,0.698436439037323,0.7766126990318298,0.07692307692307691
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Hard,3.0,1,0.7229917049407959,0.7443228960037231,0.07547169811320756
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Medium,2.0,1,0.7973185181617737,0.6366812586784363,0.14545454545454545
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Medium,2.0,1,0.795777440071106,0.6390971541404724,0.1111111111111111
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Easy,1.0,2,0.6998003721237183,0.7747496366500854,0.09329140461215933
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Medium,2.0,1,0.8209584355354309,0.5984004735946655,0.126984126984127
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Hard,3.0,1,0.6320109963417053,0.8578916192054749,0.08000000000000002
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Medium,2.0,2,0.577146053314209,0.919623851776123,0.07692307692307691
+Does microRNA-19a enhance proliferation of bronchial epithelial cells by targeting TGFβR2 gene in severe asthma?,Easy,0.0,1,1.0,0.0,1.0
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Medium,2.0,1,0.6011347770690918,0.8931577205657959,0.21052631578947367
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,0.0,1,0.6366705894470215,0.8524428606033325,0.2711864406779661
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Medium,1.5,2,0.7752484083175659,0.6687027215957642,0.3928571428571429
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,0.0,1,0.7610743045806885,0.6912679076194763,0.3666666666666667
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,0.0,1,0.6675373315811157,0.8154296278953552,0.21818181818181814
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,0.0,1,0.4588342010974884,1.0403517484664917,0.12244897959183673
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,1.0,1,0.7295819520950317,0.7354155778884888,0.2622950819672132
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Hard,3.0,1,0.7703944444656372,0.6776511669158936,0.2903225806451613
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,1.0,1,0.8210121393203735,0.5983107686042786,0.3793103448275862
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Medium,2.0,1,0.7965739369392395,0.6378495693206787,0.33333333333333337
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Medium,2.0,1,0.8649677038192749,0.519677460193634,0.44827586206896547
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,0.0,1,0.7385189533233643,0.7231611609458923,0.3793103448275862
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Medium,2.0,1,0.7985596656799316,0.6347287893295288,0.3103448275862069
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,1.0,1,0.5014644861221313,0.9985345005989075,0.22641509433962265
+Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?,Easy,0.0,1,1.0,0.0,1.0
+Does blockade of p38 mitogen-activated protein kinase pathway ameliorate delayed gastric emptying in streptozotocin-induced diabetic rats?,Easy,0.6,5,0.8685252070426941,0.5124967694282532,0.3277777777777778
+Does blockade of p38 mitogen-activated protein kinase pathway ameliorate delayed gastric emptying in streptozotocin-induced diabetic rats?,Easy,0.42857142857142855,7,0.8293243646621704,0.5828691124916077,0.28157349896480327
+Does blockade of p38 mitogen-activated protein kinase pathway ameliorate delayed gastric emptying in streptozotocin-induced diabetic rats?,Easy,1.0,1,0.6903892755508423,0.7869064211845398,0.30985915492957744
+Does blockade of p38 mitogen-activated protein kinase pathway ameliorate delayed gastric emptying in streptozotocin-induced diabetic rats?,Easy,1.0,1,0.8591877818107605,0.530683159828186,0.3333333333333333
+Does blockade of p38 mitogen-activated protein kinase pathway ameliorate delayed gastric emptying in streptozotocin-induced diabetic rats?,Easy,1.0,1,0.8842806220054626,0.48108088970184326,0.3783783783783784
+Does blockade of p38 mitogen-activated protein kinase pathway ameliorate delayed gastric emptying in streptozotocin-induced diabetic rats?,Easy,0.0,1,1.0,0.0,1.0
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.2882634103298187,1.19309401512146,0.0
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Medium,2.0,1,0.6903785467147827,0.7869199514389038,0.13513513513513514
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.38125497102737427,1.1124253273010254,0.10256410256410255
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Medium,2.0,1,0.3550058901309967,1.1357765197753906,0.10256410256410255
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Medium,2.0,1,0.29908621311187744,1.1839879751205444,0.08
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.29555070400238037,1.1869703531265259,0.057142857142857134
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.23253968358039856,1.2389191389083862,0.13333333333333333
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Medium,2.0,1,0.50883948802948,0.9911211133003235,0.13157894736842105
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.37230879068374634,1.120438575744629,0.10256410256410255
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.5887160301208496,0.906955361366272,0.1081081081081081
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.5105326175689697,0.9894112944602966,0.16
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Medium,2.0,1,0.18541072309017181,1.2763928174972534,0.0273972602739726
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.4283747673034668,1.0692288875579834,0.13333333333333333
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,0.0,1,0.5338135361671448,0.9655945897102356,0.13333333333333333
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,1.0,1,0.262408584356308,1.2145709991455078,0.05633802816901408
+Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?,Easy,0.0,1,1.0,0.0,1.0
+Is persistent insomnia associated with mortality risk?,Medium,2.0,1,0.731082558631897,0.7333723902702332,0.21739130434782608
+Is persistent insomnia associated with mortality risk?,Medium,1.5,2,0.7170704007148743,0.7443646788597107,0.23306233062330622
+Is persistent insomnia associated with mortality risk?,Easy,1.0,1,0.8518775105476379,0.5442839860916138,0.2631578947368421
+Is persistent insomnia associated with mortality risk?,Easy,1.0,2,0.7478822469711304,0.7078743577003479,0.19090909090909092
+Is persistent insomnia associated with mortality risk?,Easy,1.0,1,0.7953981757164001,0.6396904587745667,0.2564102564102564
+Is persistent insomnia associated with mortality risk?,Easy,0.0,1,0.7684565782546997,0.6805049180984497,0.1951219512195122
+Is persistent insomnia associated with mortality risk?,Easy,1.0,1,0.7140763401985168,0.7562059760093689,0.15384615384615383
+Is persistent insomnia associated with mortality risk?,Easy,0.0,1,0.7805252075195312,0.6625328063964844,0.15789473684210528
+Is persistent insomnia associated with mortality risk?,Medium,2.0,1,0.9016951322555542,0.4434070289134979,0.1951219512195122
+Is persistent insomnia associated with mortality risk?,Easy,1.0,1,0.7529468536376953,0.7029269933700562,0.20512820512820512
+Is persistent insomnia associated with mortality risk?,Easy,1.0,1,0.7481284141540527,0.7097486853599548,0.14634146341463417
+Is persistent insomnia associated with mortality risk?,Easy,0.0,1,0.785477876663208,0.6550148129463196,0.18604651162790697
+Is persistent insomnia associated with mortality risk?,Easy,1.0,1,0.7035114765167236,0.770050048828125,0.23809523809523808
+Is persistent insomnia associated with mortality risk?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.5723944902420044,0.9247761368751526,0.26086956521739135
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Medium,2.0,1,0.5357134342193604,0.9636250138282776,0.2325581395348837
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.5853752493858337,0.9106313586235046,0.23809523809523808
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.57057785987854,0.9267385601997375,0.27272727272727276
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Medium,2.0,1,0.5301350355148315,0.9693967700004578,0.1951219512195122
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Medium,2.0,1,0.5489232540130615,0.9498176574707031,0.25
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Medium,2.0,1,0.5060122013092041,0.9939696192741394,0.18604651162790697
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.41382426023483276,1.082751750946045,0.28571428571428575
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.45613011717796326,1.0429476499557495,0.1951219512195122
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.4323955774307251,1.0654617547988892,0.15
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.6549428701400757,0.830731213092804,0.22727272727272724
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Medium,2.0,1,0.40127575397491455,1.0942798852920532,0.1951219512195122
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.4131558835506439,1.0833688974380493,0.19047619047619044
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,1.0,1,0.54117351770401,0.9579420685768127,0.22727272727272724
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Medium,2.0,1,0.6262327432632446,0.8646008372306824,0.2325581395348837
+Does use of PET-CT for the assessment of treatment result in patients with sarcoidosis?,Easy,0.0,1,1.0,0.0,1.0
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.93836510181427,0.35109803080558777,0.4444444444444445
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.8819551467895508,0.4858906865119934,0.358974358974359
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,3,0.8076342940330505,0.6197749972343445,0.32432432432432434
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Hard,3.0,1,0.8262637853622437,0.5894679427146912,0.358974358974359
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.7004165649414062,0.7740587592124939,0.17647058823529413
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.8755607604980469,0.4988773465156555,0.41025641025641024
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.8013405203819275,0.6303324699401855,0.32432432432432434
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.8022371530532837,0.6289083361625671,0.32432432432432434
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.839513897895813,0.5665441751480103,0.3902439024390244
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.8107525110244751,0.6152194142341614,0.35000000000000003
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.7138690948486328,0.7564799785614014,0.24390243902439024
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.8136837482452393,0.6104363799095154,0.32432432432432434
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Medium,2.0,1,0.6934926509857178,0.782952606678009,0.35000000000000003
+Does atomoxetine reduce hyperactive/impulsive behaviours in neurokinin-1 receptor 'knockout ' mice?,Easy,0.0,1,1.0,0.0,1.0
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Medium,2.0,2,0.7177804112434387,0.7246422171592712,0.0759493670886076
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,1.0,1,0.5784011483192444,0.918258011341095,0.11904761904761904
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Medium,2.0,1,0.7718348503112793,0.6755222082138062,0.1839080459770115
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,1.0,1,0.7486996650695801,0.7089434266090393,0.0759493670886076
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Hard,3.0,1,0.6350607872009277,0.8543291687965393,0.16666666666666666
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Medium,2.0,1,0.5491071939468384,0.9496238827705383,0.07058823529411765
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,0.0,1,0.6272025108337402,0.863478422164917,0.14814814814814814
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,1.0,1,0.6724092960357666,0.809432864189148,0.07228915662650602
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Medium,2.0,1,0.5284422039985657,0.9711413979530334,0.07692307692307693
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Hard,3.0,1,0.4990314543247223,1.0009682178497314,0.10389610389610389
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,1.0,1,0.47538283467292786,1.0243213176727295,0.07894736842105264
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,1.0,1,0.6226218342781067,0.8687672019004822,0.10389610389610389
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Hard,3.0,1,0.5510333776473999,0.9475933313369751,0.1095890410958904
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,1.0,1,0.7252709865570068,0.7412543296813965,0.09302325581395347
+Does prospective international cohort study demonstrate inability of interim PET to predict treatment failure in diffuse large B-cell lymphoma?,Easy,0.0,1,1.0,0.0,1.0
+Does cardiac-specific ablation of synapse-associated protein SAP97 in mice decrease potassium currents but not sodium current?,Medium,2.0,5,0.5079315900802612,0.989367663860321,0.14062130741376025
+Does cardiac-specific ablation of synapse-associated protein SAP97 in mice decrease potassium currents but not sodium current?,Medium,2.0,6,0.5801321864128113,0.9161378145217896,0.14243943191311614
+Does cardiac-specific ablation of synapse-associated protein SAP97 in mice decrease potassium currents but not sodium current?,Medium,2.0,1,0.5752352476119995,0.9216992855072021,0.14285714285714288
+Does cardiac-specific ablation of synapse-associated protein SAP97 in mice decrease potassium currents but not sodium current?,Medium,2.0,1,0.4958692491054535,1.0041223764419556,0.14814814814814814
+Does cardiac-specific ablation of synapse-associated protein SAP97 in mice decrease potassium currents but not sodium current?,Medium,2.0,1,0.5783563852310181,0.9183067083358765,0.21052631578947364
+Does cardiac-specific ablation of synapse-associated protein SAP97 in mice decrease potassium currents but not sodium current?,Medium,2.0,1,0.678864598274231,0.801418125629425,0.5
+Does cardiac-specific ablation of synapse-associated protein SAP97 in mice decrease potassium currents but not sodium current?,Easy,0.0,1,1.000000238418579,0.0,1.0
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Medium,1.2,5,0.6501187086105347,0.8342953324317932,0.15384615384615383
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Medium,2.0,1,0.5884836912155151,0.9072114825248718,0.15999999999999998
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Easy,0.0,1,0.6030369997024536,0.8910253643989563,0.15999999999999998
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Medium,2.0,1,0.6687663197517395,0.8139210343360901,0.20689655172413793
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Medium,2.0,1,0.762302577495575,0.68948894739151,0.30769230769230765
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Medium,1.5,2,0.6447777152061462,0.8428787589073181,0.14285714285714285
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Medium,2.0,1,0.6535835266113281,0.8323659896850586,0.15384615384615383
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Easy,1.0,1,0.8357452154159546,0.5731576681137085,0.37037037037037035
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Easy,1.0,1,0.6404941082000732,0.8479457497596741,0.15384615384615383
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Easy,1.0,1,0.6684284806251526,0.8143361210823059,0.15999999999999998
+Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Are hospitalisation costs for infant bronchiolitis up to 20 times higher if intensive care is needed?,Medium,1.3333333333333333,3,0.8296666741371155,0.5800381302833557,0.20819069883944227
+Are hospitalisation costs for infant bronchiolitis up to 20 times higher if intensive care is needed?,Medium,1.5,2,0.7186586856842041,0.74535071849823,0.1838383838383838
+Are hospitalisation costs for infant bronchiolitis up to 20 times higher if intensive care is needed?,Hard,2.8333333333333335,6,0.8341829180717468,0.5718867778778076,0.24151234342223069
+Are hospitalisation costs for infant bronchiolitis up to 20 times higher if intensive care is needed?,Medium,2.0,2,0.5050489902496338,0.9943287968635559,0.1754385964912281
+Are hospitalisation costs for infant bronchiolitis up to 20 times higher if intensive care is needed?,Hard,3.0,1,0.8232226371765137,0.5946047902107239,0.2068965517241379
+Are hospitalisation costs for infant bronchiolitis up to 20 times higher if intensive care is needed?,Medium,2.0,1,0.8338690996170044,0.5764214992523193,0.2068965517241379
+Are hospitalisation costs for infant bronchiolitis up to 20 times higher if intensive care is needed?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.8754976987838745,0.4990035593509674,0.38596491228070173
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.45415690541267395,1.0448378324508667,0.04444444444444444
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.6694186329841614,0.8131190538406372,0.21739130434782608
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Hard,3.0,1,0.5505833625793457,0.9480682015419006,0.21276595744680848
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.6073497533798218,0.886171817779541,0.16666666666666666
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Easy,1.0,1,0.8248295187950134,0.5918959975242615,0.16666666666666666
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Easy,1.0,1,0.5878041982650757,0.9079601764678955,0.1702127659574468
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Easy,1.0,1,0.5170433521270752,0.9828088879585266,0.09523809523809522
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.5669100284576416,0.9306879639625549,0.20408163265306123
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Easy,1.0,1,0.5672953724861145,0.9302737712860107,0.17391304347826086
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Easy,1.0,1,0.5464886426925659,0.952377438545227,0.1395348837209302
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Easy,1.0,1,0.5745890140533447,0.922400176525116,0.2553191489361702
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.4534664750099182,1.0454984903335571,0.1923076923076923
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.5943622589111328,0.9007083177566528,0.13043478260869562
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Medium,2.0,1,0.5761185884475708,0.9207403063774109,0.2
+Is biliary-enteric reconstruction with hepaticoduodenostomy following laparoscopic excision of choledochal cyst associated with better postoperative outcomes : a single-centre experience?,Easy,0.0,1,1.0,0.0,1.0
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,0.0,1,0.4891282916069031,1.0108132362365723,0.08955223880597014
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,0.0,1,0.26719266176223755,1.2106256484985352,0.09375
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,1.0,1,0.2930757403373718,1.1890535354614258,0.11764705882352941
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,1.0,1,0.4378022253513336,1.0603752136230469,0.12121212121212122
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,1.0,1,0.29949986934661865,1.183638572692871,0.09230769230769231
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Medium,2.0,1,0.35460543632507324,1.1361290216445923,0.06349206349206349
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Medium,2.0,1,0.2630712389945984,1.2140252590179443,0.03225806451612903
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,0.0,1,0.4235462546348572,1.073735237121582,0.0967741935483871
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,0.0,1,0.24030989408493042,1.2326313257217407,0.06153846153846154
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,1.0,1,0.18770182132720947,1.2745965719223022,0.03125
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,0.0,1,0.3551017642021179,1.1356921195983887,0.030303030303030304
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Medium,2.0,1,0.41345036029815674,1.0830971002578735,0.12121212121212122
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,1.0,1,0.3750300109386444,1.1180070638656616,0.09090909090909091
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,1.0,1,0.36348435282707214,1.1282869577407837,0.06153846153846154
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,0.0,1,0.4101558029651642,1.0861345529556274,0.12307692307692308
+Is minimally invasive coronary artery bypass grafting associated with improved clinical outcomes?,Easy,0.0,1,1.0,0.0,1.0
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Medium,1.5,2,0.8277795314788818,0.5795434713363647,0.24695652173913044
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,0.0,1,0.8321534395217896,0.5793905258178711,0.24000000000000002
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,1.0,1,0.8455253839492798,0.555832028388977,0.12765957446808512
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Medium,2.0,1,0.760576605796814,0.6919876337051392,0.12765957446808512
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,0.0,1,0.7995270490646362,0.6332030296325684,0.16666666666666666
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Hard,3.0,3,0.8585070371627808,0.5297597646713257,0.17499999999999996
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Hard,3.0,1,0.6182909607887268,0.8737380504608154,0.29090909090909095
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,1.0,1,0.44437921047210693,1.0541545152664185,0.12000000000000001
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,1.0,1,0.6702415943145752,0.8121066093444824,0.125
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,0.0,1,0.44114571809768677,1.0572173595428467,0.0816326530612245
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,0.0,1,0.5409976243972778,0.9581257104873657,0.16666666666666666
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,0.0,1,0.7417847514152527,0.7186310887336731,0.32142857142857145
+Do serum miRNA biomarkers serve as a fingerprint for proliferative diabetic retinopathy?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,2.0,1,0.78607577085495,0.6541013121604919,0.3389830508474576
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,1.5,2,0.7646092176437378,0.6853182315826416,0.2811475409836066
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Hard,2.3333333333333335,3,0.9076524376869202,0.4286125600337982,0.39781420765027325
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,2.0,1,0.9403223395347595,0.3454786241054535,0.5079365079365079
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,2.0,1,0.8322663307189941,0.5791956186294556,0.47619047619047616
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,1.5,2,0.7082401514053345,0.7627182006835938,0.28571428571428575
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,2.0,1,0.85216224193573,0.5437607169151306,0.5454545454545454
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,1.5,2,0.7926220893859863,0.643376886844635,0.31666666666666665
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,2.0,1,0.6601047515869141,0.8244941830635071,0.1694915254237288
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Medium,2.0,1,0.7807753086090088,0.6621551513671875,0.2413793103448276
+Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?,Easy,0.0,1,1.0,0.0,1.0
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,1,0.5980639457702637,0.8965891599655151,0.24489795918367346
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,2,0.8885715007781982,0.47170859575271606,0.2526595744680851
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,1,0.6073683500289917,0.8861508965492249,0.27999999999999997
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,1,0.667091965675354,0.815975546836853,0.23076923076923078
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,1,0.6719159483909607,0.8100420236587524,0.3018867924528302
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,2,0.6185182929039001,0.8727104067802429,0.25764705882352934
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,3,0.6964653730392456,0.7734668850898743,0.2518890633176347
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,1,0.7810693979263306,0.6617108583450317,0.3111111111111111
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Easy,1.0,1,0.6198633909225464,0.8719365000724792,0.23529411764705876
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,1,0.7365974187850952,0.7258135080337524,0.26086956521739124
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Hard,3.0,1,0.7650760412216187,0.6854545474052429,0.26086956521739124
+Is fasting serum dipeptidyl peptidase-4 activity independently associated with alanine aminotransferase in type 1 diabetic patients?,Easy,0.0,1,1.0,0.0,1.0
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Medium,2.0,1,0.7870807647705078,0.6525630950927734,0.14705882352941177
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Easy,1.0,1,0.5100607872009277,0.9898881316184998,0.06349206349206349
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Medium,2.0,1,0.577134907245636,0.9196358919143677,0.06451612903225806
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Easy,1.0,1,0.5704864263534546,0.9268372654914856,0.12121212121212122
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Easy,1.0,1,0.49479207396507263,1.0051944255828857,0.06557377049180328
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Hard,3.0,1,0.7339044809341431,0.7295142412185669,0.11594202898550725
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Medium,2.0,1,0.48248645663261414,1.0173629522323608,0.09523809523809525
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Hard,3.0,1,0.8491566181182861,0.5492602586746216,0.1639344262295082
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Medium,2.0,1,0.8107035160064697,0.6152991652488708,0.15384615384615385
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Medium,2.0,1,0.7515606880187988,0.7048962712287903,0.11594202898550725
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Hard,3.0,1,0.726599931716919,0.7394594550132751,0.11764705882352941
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Medium,2.0,1,0.5551861524581909,0.9432007670402527,0.09523809523809525
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Easy,1.0,1,0.8098468780517578,0.616689920425415,0.15384615384615385
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Easy,1.0,1,0.4570796489715576,1.042036771774292,0.09375
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Medium,2.0,1,0.7647194862365723,0.6859747767448425,0.11940298507462686
+Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?,Easy,0.0,1,1.000000238418579,0.0,1.0
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Medium,2.0,1,0.6961731910705566,0.7795214653015137,0.10526315789473685
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Hard,3.0,4,0.7466485500335693,0.7086036205291748,0.12032085561497327
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Medium,2.0,2,0.7917981147766113,0.6451520323753357,0.2253968253968254
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Hard,3.0,1,0.7260406017303467,0.7402154803276062,0.11764705882352941
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Medium,2.0,1,0.7683379054069519,0.6806793212890625,0.21621621621621623
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Hard,3.0,1,0.6967194080352783,0.7788204550743103,0.1111111111111111
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Medium,2.0,1,0.7316027283668518,0.7326627373695374,0.11764705882352941
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Hard,3.0,3,0.792397141456604,0.6441255807876587,0.23081232492997197
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Medium,2.0,1,0.6942400932312012,0.7819973826408386,0.052631578947368425
+Does cannabidiol fail to reverse hypothermia or locomotor suppression induced by Δ ( 9 ) -tetrahydrocannabinol in Sprague-Dawley rats?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Medium,2.0,1,0.7087571620941162,0.7632075548171997,0.326530612244898
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Hard,3.0,1,0.579487144947052,0.9170745015144348,0.16666666666666666
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Medium,2.0,1,0.5365975499153137,0.962706983089447,0.12500000000000003
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Medium,2.0,1,0.58640456199646,0.9095003008842468,0.0851063829787234
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Hard,3.0,1,0.6547791957855225,0.8309281468391418,0.2222222222222222
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Hard,3.0,1,0.5797535181045532,0.9167839884757996,0.12244897959183672
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Hard,2.5,4,0.7261970639228821,0.7391811013221741,0.3287910552061496
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Hard,3.0,1,0.5469615459442139,0.9518808126449585,0.09090909090909091
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Hard,3.0,2,0.5810134410858154,0.9076053500175476,0.12505427702996091
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Medium,2.0,1,0.5535911917686462,0.9448903203010559,0.08695652173913043
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Medium,2.0,1,0.5426679849624634,0.9563806056976318,0.16666666666666666
+Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?,Easy,0.0,1,0.9999999403953552,0.0,1.0
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.8529804944992065,0.5422537326812744,0.30434782608695654
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.34798043966293335,1.1419453620910645,0.2978723404255319
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.7485057711601257,0.7092167735099792,0.36
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,2,0.8559582233428955,0.5356674194335938,0.252262443438914
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.8404585123062134,0.5648744702339172,0.2127659574468085
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.6989111304283142,0.7760012149810791,0.2641509433962264
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.8476861715316772,0.5519310832023621,0.23333333333333334
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Medium,2.0,1,0.3994726240634918,1.0959264039993286,0.27906976744186046
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.36280637979507446,1.12888765335083,0.13333333333333333
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.28099948167800903,1.1991667747497559,0.13043478260869562
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Medium,2.0,1,0.7185442447662354,0.7502743005752563,0.24000000000000005
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.5555448532104492,0.9428205490112305,0.2745098039215686
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.8498446941375732,0.5480060577392578,0.2222222222222222
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Hard,3.0,1,0.5446248054504395,0.9543324112892151,0.18181818181818182
+Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.7396634817123413,0.7215766906738281,0.12
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.7749051451683044,0.6709617972373962,0.25
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.7411407232284546,0.7195265889167786,0.18867924528301888
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,2,0.7786510586738586,0.66521817445755,0.2545454545454546
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.8049716949462891,0.6245450973510742,0.15384615384615385
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,2,0.8133857846260071,0.60923171043396,0.19163891971883093
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.8026678562164307,0.6282230615615845,0.15686274509803924
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.7620562314987183,0.6898460388183594,0.2545454545454546
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.7050630450248718,0.7680324912071228,0.18518518518518517
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.7615797519683838,0.6905364394187927,0.25
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,2,0.7726958990097046,0.6711487770080566,0.2159090909090909
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Hard,3.0,1,0.7342183589935303,0.7290839552879333,0.25
+Does liver-specific deletion of augmenter of liver regeneration accelerate development of steatohepatitis and hepatocellular carcinoma in mice?,Easy,0.0,1,1.0,0.0,1.0
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Medium,1.5,2,0.9525387287139893,0.30784058570861816,0.45762711864406785
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Hard,3.0,1,0.7257888317108154,0.7405555844306946,0.16393442622950818
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Medium,2.0,1,0.8739792108535767,0.5020374059677124,0.39344262295081966
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Hard,2.5,2,0.9447128772735596,0.33068719506263733,0.5957636566332218
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Medium,2.0,1,0.7457473278045654,0.7130955457687378,0.14035087719298245
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Hard,3.0,2,0.8277868628501892,0.5810599327087402,0.12214452214452215
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Hard,3.0,1,0.9254700541496277,0.3860829174518585,0.5679012345679012
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Medium,2.0,1,0.8948591351509094,0.45856496691703796,0.6052631578947368
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Easy,1.0,1,0.7267840504646301,0.7392104268074036,0.16129032258064516
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Hard,3.0,1,0.7675384283065796,0.6818528175354004,0.1764705882352941
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Hard,2.5,2,0.8998629450798035,0.44514018297195435,0.597165991902834
+"Is serum free 1,25-dihydroxy-vitamin D more closely associated with fibroblast growth factor 23 than other vitamin D forms in chronic dialysis patients?",Easy,0.0,1,1.0,0.0,1.0
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Hard,3.0,1,0.5985459089279175,0.8960514664649963,0.11267605633802817
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Hard,3.0,2,0.7569412589073181,0.6971418857574463,0.13423423423423422
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Medium,2.0,1,0.6680997610092163,0.814739465713501,0.11594202898550726
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Hard,3.0,1,0.5678181648254395,0.9297115206718445,0.10810810810810811
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Medium,2.0,1,0.5789781808853149,0.9176293611526489,0.10810810810810811
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Medium,2.0,1,0.6711763143539429,0.8109546303749084,0.1111111111111111
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Medium,2.0,1,0.7920156717300415,0.6449564099311829,0.1408450704225352
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Medium,2.0,1,0.5434332489967346,0.9555801749229431,0.1095890410958904
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Medium,2.0,1,0.7594603300094604,0.6935988068580627,0.1408450704225352
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Hard,3.0,1,0.5728424191474915,0.9242917895317078,0.11267605633802817
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Hard,3.0,1,0.49854961037635803,1.0014493465423584,0.08108108108108107
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Easy,1.0,1,0.5337101221084595,0.9657017588615417,0.08450704225352114
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Medium,2.0,1,0.6342501044273376,0.8552775979042053,0.1095890410958904
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Easy,0.0,1,0.7542179822921753,0.7011162638664246,0.1111111111111111
+Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?,Easy,0.0,1,1.0,0.0,1.0
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,1,0.7229523658752441,0.7443758249282837,0.34615384615384615
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,1,0.7495914697647095,0.7076844573020935,0.4651162790697674
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,2,0.7171170711517334,0.746187150478363,0.28502415458937197
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,1,0.7502481937408447,0.7067558169364929,0.18604651162790697
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,1,0.7367275953292847,0.7256341576576233,0.4090909090909091
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,2.5,4,0.7350936532020569,0.7204885482788086,0.3869041011409189
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,1,0.6744774580001831,0.8068737983703613,0.25
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,1,0.7884507775306702,0.6504602432250977,0.24000000000000002
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,1,0.8062610626220703,0.6224771738052368,0.4615384615384615
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Hard,3.0,2,0.7526328563690186,0.7007991075515747,0.40816326530612246
+Does pregestational maternal obesity impair endocrine pancreas in male F1 and F2 progeny?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.48675626516342163,1.0131572484970093,0.06451612903225806
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.4777103662490845,1.0220465660095215,0.061538461538461535
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Easy,1.0,1,0.5013394355773926,0.9986596703529358,0.06060606060606061
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Hard,3.0,1,0.612055778503418,0.8808452486991882,0.23529411764705882
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Hard,3.0,1,0.7363547086715698,0.7261478304862976,0.14285714285714285
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Hard,3.0,1,0.6916071176528931,0.7853571772575378,0.18666666666666668
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.5166114568710327,0.9832481741905212,0.17647058823529413
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Hard,3.0,1,0.5191894769668579,0.9806227684020996,0.14705882352941174
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Hard,3.0,1,0.5638712048530579,0.9339473843574524,0.1739130434782609
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.5742459297180176,0.9227720499038696,0.08450704225352113
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.6981731653213501,0.7769516110420227,0.1515151515151515
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.47117358446121216,1.028422474861145,0.06060606060606061
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.5130550861358643,0.986858606338501,0.15384615384615383
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Medium,2.0,1,0.49734222888946533,1.0026543140411377,0.0923076923076923
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Hard,3.0,1,0.724738597869873,0.7419722080230713,0.12307692307692307
+Is breathlessness at rest the dominant presentation of patients admitted with heart failure?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,0.25,4,0.8953299522399902,0.45100516080856323,0.19175084175084178
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,0.0,1,0.6105591058731079,0.8825427889823914,0.14035087719298245
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,1.0,2,0.8893899321556091,0.46767958998680115,0.22209234365867914
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,1.0,1,0.6375646591186523,0.851393461227417,0.11320754716981134
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,0.0,2,0.8085741400718689,0.6163402199745178,0.21052631578947367
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,1.0,1,0.7789559364318848,0.664897084236145,0.1818181818181818
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,1.0,1,0.5292457342147827,0.9703136682510376,0.14285714285714285
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,0.0,1,0.8737505674362183,0.5024928450584412,0.23728813559322035
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Medium,2.0,1,0.5266631841659546,0.9729715585708618,0.14035087719298245
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,0.0,1,0.48464804887771606,1.0152357816696167,0.1818181818181818
+Is hospital readmission associated with poor survival after esophagectomy for esophageal cancer?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Medium,2.0,1,0.8005659580230713,0.6315599679946899,0.18918918918918917
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Hard,3.0,2,0.5023361444473267,0.9867587089538574,0.10359964881474978
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Medium,2.0,1,0.7965148687362671,0.6379422545433044,0.11940298507462686
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Hard,3.0,3,0.8422281742095947,0.5536558032035828,0.16210991438829053
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Hard,3.0,1,0.5037312507629395,0.996261715888977,0.060606060606060594
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Hard,3.0,1,0.2696585953235626,1.2085870504379272,0.08955223880597016
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Medium,2.0,1,0.4162519574165344,1.0805072784423828,0.16
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Medium,2.0,1,0.6103809475898743,0.8827446699142456,0.05714285714285715
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Hard,3.0,1,0.5041460990905762,0.9958453178405762,0.11594202898550726
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Hard,3.0,1,0.540752112865448,0.9583818912506104,0.0588235294117647
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Hard,3.0,1,0.2317042052745819,1.239593267440796,0.08955223880597016
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Easy,1.0,1,0.6835434436798096,0.7955583930015564,0.16438356164383564
+Does different approaches for interpretation and reporting of immunohistochemistry analysis result in the bone tissue - a review?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Medium,2.0,1,0.6084667444229126,0.8849104642868042,0.22222222222222224
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Hard,2.5,2,0.617641806602478,0.8741653561592102,0.23076923076923075
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Medium,2.0,1,0.5765968561172485,0.9202208518981934,0.20689655172413796
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Easy,1.0,1,0.7578737139701843,0.6958826184272766,0.25
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Medium,2.0,1,0.6127676963806152,0.8800367116928101,0.16666666666666666
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Medium,2.0,1,0.6745743155479431,0.8067536354064941,0.17647058823529413
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Medium,2.0,1,0.6124098896980286,0.8804432153701782,0.18750000000000003
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Medium,2.0,1,0.6365811824798584,0.8525477051734924,0.17647058823529413
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Medium,2.0,1,0.6192409992218018,0.8726500272750854,0.17142857142857143
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Easy,1.0,1,0.7300664782524109,0.7347564697265625,0.24
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Easy,1.0,1,0.925202488899231,0.3867751955986023,0.4
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Hard,3.0,1,0.5990331172943115,0.8955075740814209,0.20000000000000004
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Hard,3.0,1,0.6159347891807556,0.8764305114746094,0.22222222222222224
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Hard,3.0,1,0.7716196775436401,0.6758407354354858,0.3333333333333333
+Do elevated levels of preoperative circulating CD44⁺ lymphocytes and neutrophils predict poor survival for non-small cell lung cancer patients?,Easy,0.0,1,1.0,0.0,1.0
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,2,0.7288631200790405,0.7360691428184509,0.1764705882352941
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,2.5,2,0.8607760667800903,0.5273951292037964,0.2258064516129032
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.8286292552947998,0.5854414701461792,0.27777777777777773
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,2,0.8959668874740601,0.45338547229766846,0.2852822580645161
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.8598974347114563,0.5293442010879517,0.2352941176470588
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.7264705896377563,0.7396343350410461,0.2352941176470588
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.8244385123252869,0.5925564169883728,0.2105263157894737
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.8595205545425415,0.5300556421279907,0.3684210526315789
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Medium,2.0,1,0.9127693772315979,0.41768568754196167,0.30769230769230765
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.7178940773010254,0.7511404752731323,0.3243243243243243
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.6637115478515625,0.8201079964637756,0.2222222222222222
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Hard,3.0,1,0.7447270154953003,0.7145251035690308,0.22857142857142854
+Does microRNA-29b regulate migration in oral squamous cell carcinoma and its clinical significance?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Medium,1.6666666666666667,3,0.5247904658317566,0.9564414024353027,0.08465608465608467
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Medium,2.0,1,0.6993808746337891,0.7753956317901611,0.08695652173913045
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Medium,1.3333333333333333,3,0.6101319193840027,0.8823990821838379,0.13131313131313133
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Medium,2.0,1,0.7216231822967529,0.7461594343185425,0.0634920634920635
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Hard,3.0,1,0.6711641550064087,0.8109695911407471,0.08823529411764705
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Hard,3.0,1,0.7225692868232727,0.7448902726173401,0.11594202898550726
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Easy,1.0,1,0.5012205839157104,0.9987787008285522,0.1639344262295082
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Medium,2.0,1,0.5347378253936768,0.9646369814872742,0.03076923076923077
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Hard,3.0,1,0.6619977355003357,0.8221949934959412,0.14492753623188406
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Hard,3.0,1,0.6297820806503296,0.8604857921600342,0.08955223880597014
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Easy,1.0,1,0.5823354721069336,0.9139634966850281,0.08571428571428573
+Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?,Easy,0.0,1,1.0,0.0,1.0
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,0.0,1,0.8828378915786743,0.4840705394744873,0.2247191011235955
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,0.5,2,0.7199075818061829,0.7458431124687195,0.13679122027697935
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,1.0,1,0.7879738807678223,0.6511929035186768,0.18181818181818185
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,1.0,1,0.7669017910957336,0.6827858686447144,0.17582417582417584
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,0.0,1,0.6755672693252563,0.8055220246315002,0.1276595744680851
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Medium,2.0,2,0.7270507216453552,0.7382897138595581,0.13793103448275865
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,0.0,1,0.7620077729225159,0.6899163126945496,0.16091954022988506
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,1.0,1,0.7549274563789368,0.7001036405563354,0.15555555555555553
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,1.0,1,0.6415948867797852,0.8466465473175049,0.20224719101123598
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,0.0,1,0.726277232170105,0.7398956418037415,0.17777777777777778
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,1.0,1,0.6937138438224792,0.7826700806617737,0.13333333333333333
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,1.0,1,0.7477500438690186,0.7102816700935364,0.1839080459770115
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,0.0,1,0.7332483530044556,0.7304131984710693,0.15384615384615383
+Does b7-H4 overexpression impair the immune response of T cells in human cervical carcinomas?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Does [ ITF increase the transcriptional activity of ITF promoter via the JAK-STAT3 signal transduction pathway ]?,Hard,3.0,4,0.8827440738677979,0.4842642545700073,0.8666666666666667
+Does [ ITF increase the transcriptional activity of ITF promoter via the JAK-STAT3 signal transduction pathway ]?,Hard,3.0,1,0.8583720326423645,0.5322179198265076,0.8387096774193549
+Does [ ITF increase the transcriptional activity of ITF promoter via the JAK-STAT3 signal transduction pathway ]?,Hard,3.0,3,0.86896151304245,0.5119345784187317,0.8275862068965519
+Does [ ITF increase the transcriptional activity of ITF promoter via the JAK-STAT3 signal transduction pathway ]?,Hard,3.0,5,0.8662821054458618,0.5160683393478394,0.8510344827586207
+Does [ ITF increase the transcriptional activity of ITF promoter via the JAK-STAT3 signal transduction pathway ]?,Hard,3.0,1,0.8466806411743164,0.5537498593330383,0.7586206896551724
+Does [ ITF increase the transcriptional activity of ITF promoter via the JAK-STAT3 signal transduction pathway ]?,Hard,3.0,1,0.7475143671035767,0.7106132507324219,0.8275862068965518
+Does [ ITF increase the transcriptional activity of ITF promoter via the JAK-STAT3 signal transduction pathway ]?,Easy,0.0,1,1.0,0.0,1.0
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,1,0.47484877705574036,1.024842619895935,0.12903225806451615
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,1,0.7073595523834229,0.7650365829467773,0.11428571428571428
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,1,0.47238844633102417,1.0272406339645386,0.12903225806451615
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,2,0.5461501479148865,0.9364364147186279,0.09583333333333333
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,2,0.5426374077796936,0.9325547814369202,0.16129032258064518
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,1,0.6330378651618958,0.8566938638687134,0.27777777777777773
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,2,0.5862253904342651,0.8759199380874634,0.13859020310633213
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Medium,2.0,1,0.5711451172828674,0.9261263012886047,0.12903225806451615
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Medium,2.0,1,0.5199233293533325,0.9798741936683655,0.1935483870967742
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,1,0.5626906156539917,0.9352105259895325,0.21428571428571427
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Easy,1.0,1,0.48733294010162354,1.0125877857208252,0.1935483870967742
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Hard,3.0,1,0.5419807434082031,0.9570991396903992,0.16666666666666669
+Does tRAIL receptor deletion in mice suppress the inflammation of nutrient excess?,Easy,0.0,1,1.0000001192092896,0.0,1.0
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Easy,1.0,1,0.5607401132583618,0.9372939467430115,0.06779661016949154
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.6256749629974365,0.8652457594871521,0.2153846153846154
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.4709736108779907,1.0286169052124023,0.126984126984127
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.7189368009567261,0.7497509717941284,0.11940298507462688
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,2,0.5970637798309326,0.8861181139945984,0.07894073139974779
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.5105407238006592,0.9894031286239624,0.11764705882352941
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Medium,2.0,1,0.7065591216087341,0.766082227230072,0.09999999999999999
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.5143297910690308,0.9855660796165466,0.06451612903225806
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Medium,2.0,1,0.5661457777023315,0.9315087199211121,0.126984126984127
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.6934595108032227,0.7829949259757996,0.16393442622950818
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Medium,2.0,1,0.34754806756973267,1.1423238515853882,0.06557377049180327
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.5993374586105347,0.8951677083969116,0.06557377049180327
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.6080707311630249,0.8853577971458435,0.061538461538461535
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Hard,3.0,1,0.598863422870636,0.8956971168518066,0.09523809523809523
+Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?,Easy,0.0,1,1.0000001192092896,0.0,1.0
