@@ -28,67 +28,52 @@ This installs all dependencies specified in `pyproject.toml` and locks them in `
 cse517-medhallu/
 ├── pyproject.toml      # Project config and dependencies
 ├── uv.lock             # Locked dependency versions
-├── .env.example        # Example environment variables
 ├── .gitignore          # Git ignore rules
-└── src/                # Source code
+└── dataset_generation/   # Dataset Generation code
+└── eval/   # Source code   # Evaluation code
+└── similarity_experiment/   # Similarity code
+└── variance_abalation/   # Variance analysis code
 ```
 
 ## Configuration
 
-1. Copy `.env.example` to `.env` and add your API keys:
-```bash
-cp .env.example .env
-```
-
-2. Add your OpenAI/Groq API key:
+1. Add your OpenAI/Groq API key to a .env file:
 ```
 GROQ_API_KEY=your_key_here
+OPENAI_API_KEY=your_key_here
 ```
+
+2. For HuggingFace models, we recommend using llama_server to run models locally for faster inference:
+```bash
+# Install llama-server if you haven't already
+pip install llama-server
+
+# Start a HuggingFace GGUF model on a local port
+llama-server -hf bartowski/Qwen2.5-3B-Instruct-GGUF:F16 --port 8087
+```
+Be sure to use the models and models mentioned in this table:
+
+### Available Models
+ 
+| Model | Port |
+|-------|------|
+| `Qwen/Qwen2.5-7B-Instruct` | 8085 |
+| `google/gemma-2-2b-it` | 8086 |
+| `Qwen/Qwen2.5-3B-Instruct` | 8087 |
+| `BioMistral/BioMistral-7B` | 8088 |
+| `TsinghuaC3I/Llama-3.1-8B-UltraMedical` | 8089 |
+| `meta-llama/Llama-3.1-8B-Instruct` | 8090 |
+
+ Note that it is possible that you may run out of memory when trying to run all of this. For this, make sure to only have a few models active at any time and/or reduce the quantization of the models used.
 
 ## Usage
 
-Run the main script:
+Run each of the experiment scripts:
 ```bash
-uv run python main.py
+./generate_data.sh
+./eval_models.sh
+./similarity.sh
+./variance.sh
 ```
 
-Or directly with Python:
-```bash
-python main.py
-```
-
-## Development
-
-Add new dependencies:
-```bash
-uv add package_name
-```
-
-Update dependencies:
-```bash
-uv sync
-```
-
-## Contributing
-
-1. Create a new branch:
-```bash
-git checkout -b feature-name
-```
-
-2. Make your changes and commit:
-```bash
-git add .
-git commit -m "Description of changes"
-```
-
-3. Push to GitHub:
-```bash
-git push -u origin feature-name
-```
-
-4. Create a Pull Request
-
-## License
-
-[Add your license here]
+It is estimated to take around 10-12 hours to run this code.
