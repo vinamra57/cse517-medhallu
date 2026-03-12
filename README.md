@@ -76,4 +76,4 @@ Run each of the experiment scripts:
 ./variance.sh
 ```
 
-It is estimated to take around 10-12 hours to run this code.
+It is estimated to take around 10-12 hours to run this code. Data is automatically downloaded if not present and all of the experiments we performed in the reproduction paper are run.
